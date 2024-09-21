@@ -1,0 +1,15 @@
+{
+  "originHash" : "9b3d190c0a1fe91d004db66809c53d0d7ea71816bdac3fa218934870f4d19df6",
+  "pins" : [
+    {
+      "identity" : "estabbarcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eggswift/ESTabBarController.git",
+      "state" : {
+        "revision" : "93a30b833a05fd916c6d4c5d6e94a270cf3b6636",
+        "version" : "2.9.0"
+      }
+    }
+  ],
+  "version" : 3
+}

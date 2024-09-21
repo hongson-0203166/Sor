@@ -1,0 +1,5 @@
+# Ignore R.swift file
+R.generated.swift
+# CocoaPods
+Pods/
+Podfile.lock
