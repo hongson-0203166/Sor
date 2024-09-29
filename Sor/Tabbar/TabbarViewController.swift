@@ -20,6 +20,7 @@ class MainTabBarController: ESTabBarController {
     }
 
     private func setupViewControllers() {
+      navigationController?.isNavigationBarHidden = true
       let homeVC = TabbarType.home.viewController
       homeVC.tabBarItem = ESTabBarItem(TabbarContentView(), title: TabbarType.home.title, image: TabbarType.home.icon, selectedImage: TabbarType.home.iconFill)
 

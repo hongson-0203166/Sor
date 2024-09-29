@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Outfit-Regular.ttf">
+            <string>Outfit-Regular</string>
+        </array>
+        <array key="Outfit-SemiBold.ttf">
+            <string>Outfit-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="HealthyDietTableViewCell" customModule="HeartCare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-Tb-jnr">
+                        <rect key="frame" x="62" y="10" width="306" height="150"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-Xh-5Cn" customClass="GradientView" customModule="HeartCare" customModuleProvider="target">
+                                <rect key="frame" x="250" y="10" width="63" height="23"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVN-ma-cg9">
+                                        <rect key="frame" x="-4.6666666666666856" y="1.6666666666666679" width="72.333333333333329" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="G3G-Bi-rb2"/>
+                                    <constraint firstAttribute="height" constant="23" id="VyK-VL-PPd"/>
+                                    <constraint firstItem="UVN-ma-cg9" firstAttribute="centerY" secondItem="6N1-Xh-5Cn" secondAttribute="centerY" id="a2c-9J-Q1e"/>
+                                    <constraint firstItem="UVN-ma-cg9" firstAttribute="centerX" secondItem="6N1-Xh-5Cn" secondAttribute="centerX" id="g7S-ov-9gn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.99215686274509807" green="0.81176470588235294" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="1" green="0.6470588235294118" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_triangle" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-ss-FAo">
+                                <rect key="frame" x="306" y="33" width="7" height="7.6666666666666643"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="7" id="gXG-i6-iVJ"/>
+                                    <constraint firstAttribute="height" constant="7.5" id="mHd-1r-ZSm"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-zA-Ckn">
+                                <rect key="frame" x="113" y="32.666666666666657" width="181" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corned Beef Hash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmc-86-XJq">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="23"/>
+                                        <fontDescription key="fontDescription" name="Outfit-SemiBold" family="Outfit" pointSize="18"/>
+                                        <color key="textColor" name="color_152238"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gh-2s-T3n">
+                                        <rect key="frame" x="0.0" y="35.000000000000007" width="83.666666666666671" height="18"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_star" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-BF-cbo">
+                                                <rect key="frame" x="0.0" y="1" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="eo7-aI-QAQ"/>
+                                                    <constraint firstAttribute="width" constant="16" id="mkI-U3-Yrw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.8/ 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wor-pX-dgN">
+                                                <rect key="frame" x="20" y="0.0" width="36" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="ivj-kS-d24"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Outfit-SemiBold" family="Outfit" pointSize="14"/>
+                                                <color key="textColor" name="color_243044"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="GLu-BF-cbo" firstAttribute="centerY" secondItem="3Gh-2s-T3n" secondAttribute="centerY" id="5Pk-gi-Z3i"/>
+                                            <constraint firstAttribute="height" constant="18" id="Abi-RG-gFN"/>
+                                            <constraint firstItem="wor-pX-dgN" firstAttribute="centerY" secondItem="GLu-BF-cbo" secondAttribute="centerY" id="L3L-33-Tu5"/>
+                                            <constraint firstItem="GLu-BF-cbo" firstAttribute="leading" secondItem="3Gh-2s-T3n" secondAttribute="leading" id="Or1-Qu-h8J"/>
+                                            <constraint firstItem="wor-pX-dgN" firstAttribute="leading" secondItem="GLu-BF-cbo" secondAttribute="trailing" constant="4" id="voI-xU-sFM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hx3-nW-hUI">
+                                        <rect key="frame" x="0.0" y="65" width="102" height="20"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_calo" translatesAutoresizingMaskIntoConstraints="NO" id="vkR-CQ-Bw1">
+                                                <rect key="frame" x="0.0" y="2" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="He9-No-kgf"/>
+                                                    <constraint firstAttribute="height" constant="16" id="R8W-uo-l0i"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="118.6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1F-A8-U8Y">
+                                                <rect key="frame" x="20.000000000000004" y="-0.33333333333334281" width="34.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Outfit-SemiBold" family="Outfit" pointSize="16"/>
+                                                <color key="textColor" name="color_243044"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-Yd-llV">
+                                                <rect key="frame" x="62.333333333333343" y="1" width="51" height="17.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="14"/>
+                                                <color key="textColor" name="color_A09D9D"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="j1F-A8-U8Y" firstAttribute="leading" secondItem="vkR-CQ-Bw1" secondAttribute="trailing" constant="4" id="11J-6A-Cch"/>
+                                            <constraint firstItem="vkR-CQ-Bw1" firstAttribute="centerY" secondItem="Hx3-nW-hUI" secondAttribute="centerY" id="NrN-0U-jZk"/>
+                                            <constraint firstItem="VDC-Yd-llV" firstAttribute="centerY" secondItem="j1F-A8-U8Y" secondAttribute="centerY" id="TDy-hY-d6A"/>
+                                            <constraint firstItem="VDC-Yd-llV" firstAttribute="leading" secondItem="j1F-A8-U8Y" secondAttribute="trailing" constant="8" id="dJd-Qt-lxM"/>
+                                            <constraint firstItem="vkR-CQ-Bw1" firstAttribute="leading" secondItem="Hx3-nW-hUI" secondAttribute="leading" id="l8Z-ue-Bi8"/>
+                                            <constraint firstAttribute="height" constant="20" id="omv-HO-a3h"/>
+                                            <constraint firstItem="j1F-A8-U8Y" firstAttribute="centerY" secondItem="vkR-CQ-Bw1" secondAttribute="centerY" id="uef-Sn-1VI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xmc-86-XJq" secondAttribute="trailing" constant="2.8421709430404007e-14" id="kQW-ub-fj4"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Wut-S5-DQQ">
+                                <rect key="frame" x="258" y="94" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="ThZ-v6-0zx"/>
+                                    <constraint firstAttribute="height" constant="36" id="drG-Td-M1u"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Wut-S5-DQQ" secondAttribute="bottom" constant="20" id="06V-ZD-Skm"/>
+                            <constraint firstItem="Rf1-ss-FAo" firstAttribute="trailing" secondItem="6N1-Xh-5Cn" secondAttribute="trailing" id="21R-PZ-QDL"/>
+                            <constraint firstItem="Rf1-ss-FAo" firstAttribute="top" secondItem="6N1-Xh-5Cn" secondAttribute="bottom" id="4ta-K2-6D6"/>
+                            <constraint firstAttribute="trailing" secondItem="OSh-zA-Ckn" secondAttribute="trailing" constant="12" id="DAB-ri-hnQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Wut-S5-DQQ" secondAttribute="trailing" constant="12" id="JnA-bH-dRG"/>
+                            <constraint firstAttribute="trailing" secondItem="6N1-Xh-5Cn" secondAttribute="trailing" constant="-7" id="MxB-nv-0q8"/>
+                            <constraint firstItem="OSh-zA-Ckn" firstAttribute="centerY" secondItem="aRB-Tb-jnr" secondAttribute="centerY" id="PdQ-mC-7ku"/>
+                            <constraint firstItem="6N1-Xh-5Cn" firstAttribute="top" secondItem="aRB-Tb-jnr" secondAttribute="top" constant="10" id="d1m-8K-JDK"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-JW-Cuf" customClass="ImageLoader" customModule="HeartCare" customModuleProvider="target">
+                        <rect key="frame" x="24" y="23" width="124" height="124"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="124" id="3IU-Em-6As"/>
+                            <constraint firstAttribute="width" constant="124" id="VNg-Tg-T2N"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OSh-zA-Ckn" firstAttribute="leading" secondItem="Ec9-JW-Cuf" secondAttribute="trailing" constant="27" id="4ea-az-Yo2"/>
+                    <constraint firstItem="Ec9-JW-Cuf" firstAttribute="centerY" secondItem="aRB-Tb-jnr" secondAttribute="centerY" id="5fA-99-t3x"/>
+                    <constraint firstAttribute="trailing" secondItem="aRB-Tb-jnr" secondAttribute="trailing" constant="32" id="8ZV-ar-ixq"/>
+                    <constraint firstItem="aRB-Tb-jnr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="R1y-Xk-sqv"/>
+                    <constraint firstAttribute="bottom" secondItem="aRB-Tb-jnr" secondAttribute="bottom" constant="10" id="Z5j-OF-OU6"/>
+                    <constraint firstItem="Ec9-JW-Cuf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="rOp-Xs-Z9W"/>
+                    <constraint firstItem="aRB-Tb-jnr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xPD-7c-IG6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundCellView" destination="aRB-Tb-jnr" id="mYh-Zk-4FE"/>
+                <outlet property="caloLabel" destination="j1F-A8-U8Y" id="r4f-0q-rVg"/>
+                <outlet property="foodLabel" destination="xmc-86-XJq" id="xpI-HI-e2v"/>
+                <outlet property="imageFood" destination="Ec9-JW-Cuf" id="wOP-ZD-VGK"/>
+                <outlet property="rateLabel" destination="wor-pX-dgN" id="FeU-yu-qju"/>
+                <outlet property="tagLabel" destination="UVN-ma-cg9" id="gbX-Yj-uFe"/>
+                <outlet property="tagView" destination="6N1-Xh-5Cn" id="geE-8N-ms8"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-4.2253521126760569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_healthydiet_arrow" width="36" height="36"/>
+        <image name="ic_healthydiet_calo" width="16" height="16.333333969116211"/>
+        <image name="ic_healthydiet_star" width="16" height="16.333333969116211"/>
+        <image name="ic_healthydiet_triangle" width="7" height="7.6666665077209473"/>
+        <image name="test1" width="124" height="124"/>
+        <namedColor name="color_152238">
+            <color red="0.082352941176470587" green="0.13333333333333333" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_243044">
+            <color red="0.14117647058823529" green="0.18823529411764706" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_A09D9D">
+            <color red="0.62745098039215685" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

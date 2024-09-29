@@ -68,7 +68,7 @@ enum TabbarType: CaseIterable {
         case .bmi:
             return BIMViewController()
         case .features:
-            return FeaturesViewController()
+            return RecommendViewController()
         case .settings:
             return SettingViewController()
         }

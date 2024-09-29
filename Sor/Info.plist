@@ -4,6 +4,18 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>UIAppFonts</key>
+		<array>
+			<string>Outfit-Black.ttf</string>
+			<string>Outfit-Bold.ttf</string>
+			<string>Outfit-ExtraBold.ttf</string>
+			<string>Outfit-ExtraLight.ttf</string>
+			<string>Outfit-Light.ttf</string>
+			<string>Outfit-Medium.ttf</string>
+			<string>Outfit-Regular.ttf</string>
+			<string>Outfit-SemiBold.ttf</string>
+			<string>Outfit-Thin.ttf</string>
+		</array>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>

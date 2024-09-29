@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController" customModule="Sor" customModuleProvider="target">
+            <connections>
+                <outlet property="heightHeaderConstraint" destination="tJr-Dp-YQW" id="JgX-Cb-l5f"/>
+                <outlet property="lblTitle" destination="5c9-D1-leM" id="xhE-ME-lk0"/>
+                <outlet property="leadingLabelConstraint" destination="42Q-VS-FTV" id="AEs-DF-pP4"/>
+                <outlet property="tableView" destination="NPy-79-UpN" id="ikC-Hb-1VT"/>
+                <outlet property="topLabelConstraint" destination="oSm-iN-2Xl" id="aCa-Bz-9UU"/>
+                <outlet property="view" destination="s58-SS-wLR" id="0LW-gh-C5Q"/>
+                <outlet property="viewHeader" destination="Agt-Tg-CSg" id="IJ2-rf-tkI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="s58-SS-wLR">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-Tg-CSg">
+                    <rect key="frame" x="0.0" y="59" width="393" height="109"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeartBlog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-D1-leM">
+                            <rect key="frame" x="24" y="56" width="160.66666666666666" height="40.666666666666657"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                            <color key="textColor" red="0.058823529409999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5c9-D1-leM" firstAttribute="leading" secondItem="Agt-Tg-CSg" secondAttribute="leading" constant="24" id="42Q-VS-FTV"/>
+                        <constraint firstItem="5c9-D1-leM" firstAttribute="top" secondItem="Agt-Tg-CSg" secondAttribute="top" constant="56" id="oSm-iN-2Xl"/>
+                        <constraint firstAttribute="height" constant="109" id="tJr-Dp-YQW"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NPy-79-UpN">
+                    <rect key="frame" x="0.0" y="180" width="393" height="672"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Leg-5X-Hc4"/>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.96470588239999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Agt-Tg-CSg" firstAttribute="leading" secondItem="Leg-5X-Hc4" secondAttribute="leading" id="30L-qr-Obf"/>
+                <constraint firstItem="NPy-79-UpN" firstAttribute="leading" secondItem="Leg-5X-Hc4" secondAttribute="leading" id="BXo-6X-gX9"/>
+                <constraint firstItem="Leg-5X-Hc4" firstAttribute="trailing" secondItem="NPy-79-UpN" secondAttribute="trailing" id="JqD-gI-nRT"/>
+                <constraint firstAttribute="bottom" secondItem="NPy-79-UpN" secondAttribute="bottom" id="LmY-jH-9Oz"/>
+                <constraint firstItem="NPy-79-UpN" firstAttribute="top" secondItem="Agt-Tg-CSg" secondAttribute="bottom" constant="12" id="OHj-Vr-jFn"/>
+                <constraint firstItem="Leg-5X-Hc4" firstAttribute="trailing" secondItem="Agt-Tg-CSg" secondAttribute="trailing" id="Sh8-yv-fP1"/>
+                <constraint firstItem="Agt-Tg-CSg" firstAttribute="top" secondItem="Leg-5X-Hc4" secondAttribute="top" id="nS6-tC-fAq"/>
+            </constraints>
+            <point key="canvasLocation" x="-1428" y="144"/>
+        </view>
+    </objects>
+</document>

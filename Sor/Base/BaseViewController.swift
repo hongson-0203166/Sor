@@ -12,6 +12,8 @@ class BaseViewController: UIViewController {
     
     var subscriptions = Set<AnyCancellable>()
     
+    var cancelable = Set<AnyCancellable>()
+
     deinit {
         print("\(Date()): ✅ \(String(describing: self))")
     }
@@ -30,11 +32,12 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
+      setupObservable()
     }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
         navigationController?.navigationBar.isTranslucent = false
@@ -52,22 +55,9 @@ class BaseViewController: UIViewController {
     
     func configView() {}
     
+    func setupObservable() {}
+  
     func pushToViewController(with vc: UIViewController, animated: Bool = true) {
         VCService.push(controller: vc, animated: animated)
     }
 }
-
-// MARK: - UIPopoverPresentationControllerDelegate
-extension BaseViewController: UIPopoverPresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.none
-    }
-    
-    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-    }
-    
-    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
-        return true
-    }
-}
-

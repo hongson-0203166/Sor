@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecommendTestPermissionView" customModule="PulseTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="683"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_overviewPer" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-1s-ZB4">
+                    <rect key="frame" x="102" y="9" width="146" height="146"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="146" id="6M9-fo-EUi"/>
+                        <constraint firstAttribute="height" constant="146" id="kCF-sm-0B8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hz-Yc-Agi">
+                    <rect key="frame" x="20" y="170" width="310" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" red="0.058823529411764705" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8g-U1-fvT">
+                    <rect key="frame" x="20" y="206" width="310" height="172"/>
+                    <string key="text">The health tests and recommendations provided by our AI are intended for informational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20784313725490194" green="0.24705882352941178" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-if-lKx">
+                    <rect key="frame" x="59" y="394" width="232" height="48"/>
+                    <color key="backgroundColor" red="0.9371485710144043" green="0.34122118353843689" blue="0.41031470894813538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="7cm-hV-gJ4"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Got it">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnGotItTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="gdx-Ad-4nt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Hz-Yc-Agi" secondAttribute="trailing" constant="20" id="7KX-12-0Ce"/>
+                <constraint firstItem="XcI-if-lKx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="59" id="Gmf-OM-QS4"/>
+                <constraint firstItem="XcI-if-lKx" firstAttribute="top" secondItem="c8g-U1-fvT" secondAttribute="bottom" constant="16" id="ShE-g0-gO0"/>
+                <constraint firstItem="XcI-if-lKx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZhS-oP-iWE"/>
+                <constraint firstAttribute="trailing" secondItem="c8g-U1-fvT" secondAttribute="trailing" constant="20" id="feb-FZ-0Xe"/>
+                <constraint firstItem="jwK-1s-ZB4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="hKd-6I-18o"/>
+                <constraint firstItem="4Hz-Yc-Agi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="iZt-r4-Sti"/>
+                <constraint firstItem="c8g-U1-fvT" firstAttribute="top" secondItem="4Hz-Yc-Agi" secondAttribute="bottom" constant="12" id="mi5-Ii-C2d"/>
+                <constraint firstItem="c8g-U1-fvT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="sit-Pv-lwp"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XcI-if-lKx" secondAttribute="bottom" constant="24" id="xsd-QX-fqe"/>
+                <constraint firstItem="4Hz-Yc-Agi" firstAttribute="top" secondItem="jwK-1s-ZB4" secondAttribute="bottom" constant="15" id="yvM-eC-6xS"/>
+                <constraint firstItem="jwK-1s-ZB4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zRI-sy-LFR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="24"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnGotIt" destination="XcI-if-lKx" id="2XL-Q3-ID8"/>
+                <outlet property="lblSub" destination="c8g-U1-fvT" id="XLv-6e-GWb"/>
+                <outlet property="lblTitle" destination="4Hz-Yc-Agi" id="2zg-Sv-b7F"/>
+            </connections>
+            <point key="canvasLocation" x="87.022900763358777" y="46.126760563380287"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_overviewPer" width="146" height="146"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

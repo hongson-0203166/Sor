@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="IngredientsTableViewCell" customModule="HeartCare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bJ-gr-KLS">
+                        <rect key="frame" x="20" y="18" width="7" height="7"/>
+                        <color key="backgroundColor" name="color_42C6FC"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="7" id="Vrs-jA-jkT"/>
+                            <constraint firstAttribute="width" constant="7" id="rTq-jh-ET1"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 large flour tortilla, burrito size1 large flour tortilla, burrito size1 large flour tortilla, burrito size" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-cC-o6x">
+                        <rect key="frame" x="35" y="12" width="265" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4bJ-gr-KLS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="2Qd-gK-9gs"/>
+                    <constraint firstItem="4bJ-gr-KLS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BSg-cd-dvu"/>
+                    <constraint firstItem="BMe-cC-o6x" firstAttribute="leading" secondItem="4bJ-gr-KLS" secondAttribute="trailing" constant="8" id="JlW-rq-EBE"/>
+                    <constraint firstAttribute="trailing" secondItem="BMe-cC-o6x" secondAttribute="trailing" constant="20" id="Nda-vz-Y8p"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BMe-cC-o6x" secondAttribute="bottom" constant="4" id="P3h-dK-ULe"/>
+                    <constraint firstItem="BMe-cC-o6x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="aBe-jj-R6M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="colorView" destination="4bJ-gr-KLS" id="ics-Ae-aQH"/>
+                <outlet property="dataLabel" destination="BMe-cC-o6x" id="Mv2-JX-OAg"/>
+            </connections>
+            <point key="canvasLocation" x="105" y="-11"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="color_42C6FC">
+            <color red="0.25882352941176473" green="0.77647058823529413" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

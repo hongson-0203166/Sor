@@ -7,6 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		632940CA2CA9A6CF000142A2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940C92CA9A6CF000142A2 /* ImageLoader.swift */; };
+		632940E02CA9A9CB000142A2 /* ArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940CC2CA9A9CB000142A2 /* ArticlesModel.swift */; };
+		632940E12CA9A9CB000142A2 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940CE2CA9A9CB000142A2 /* ArticlesViewModel.swift */; };
+		632940E22CA9A9CB000142A2 /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940D02CA9A9CB000142A2 /* ArticlesTableViewCell.swift */; };
+		632940E32CA9A9CB000142A2 /* ArticlesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632940D12CA9A9CB000142A2 /* ArticlesTableViewCell.xib */; };
+		632940E42CA9A9CB000142A2 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940D32CA9A9CB000142A2 /* ArticlesViewController.swift */; };
+		632940E52CA9A9CB000142A2 /* ArticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632940D42CA9A9CB000142A2 /* ArticlesViewController.xib */; };
+		632940E62CA9A9CB000142A2 /* ArticlesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940D62CA9A9CB000142A2 /* ArticlesDetailViewModel.swift */; };
+		632940E72CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940D82CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.swift */; };
+		632940E82CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632940D92CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.xib */; };
+		632940E92CA9A9CB000142A2 /* ArticlesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940DC2CA9A9CB000142A2 /* ArticlesDetailViewController.swift */; };
+		632940EA2CA9A9CB000142A2 /* ArticlesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632940DD2CA9A9CB000142A2 /* ArticlesDetailViewController.xib */; };
+		632940EC2CA9AA6D000142A2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940EB2CA9AA6D000142A2 /* Common.swift */; };
+		632940EE2CA9ACF5000142A2 /* Extension+Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940ED2CA9ACF5000142A2 /* Extension+Tableview.swift */; };
+		632940F02CA9AE60000142A2 /* Extension + Veiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940EF2CA9AE60000142A2 /* Extension + Veiw.swift */; };
+		632940F22CA9AFB1000142A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940F12CA9AFB1000142A2 /* Constants.swift */; };
+		632941082CA9B03C000142A2 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940F32CA9B03C000142A2 /* ReceiptModel.swift */; };
+		632941092CA9B03C000142A2 /* HealthyDietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940F52CA9B03C000142A2 /* HealthyDietViewModel.swift */; };
+		6329410A2CA9B03C000142A2 /* HealthyDietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940F72CA9B03C000142A2 /* HealthyDietTableViewCell.swift */; };
+		6329410B2CA9B03C000142A2 /* HealthyDietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632940F82CA9B03C000142A2 /* HealthyDietTableViewCell.xib */; };
+		6329410C2CA9B03C000142A2 /* HealthyDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940FA2CA9B03C000142A2 /* HealthyDietViewController.swift */; };
+		6329410D2CA9B03C000142A2 /* HealthyDietViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632940FB2CA9B03C000142A2 /* HealthyDietViewController.xib */; };
+		6329410E2CA9B03C000142A2 /* HealthyDietDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940FD2CA9B03C000142A2 /* HealthyDietDetailViewModel.swift */; };
+		6329410F2CA9B03C000142A2 /* CookStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632940FF2CA9B03C000142A2 /* CookStepTableViewCell.swift */; };
+		632941102CA9B03C000142A2 /* CookStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941002CA9B03C000142A2 /* CookStepTableViewCell.xib */; };
+		632941112CA9B03C000142A2 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941012CA9B03C000142A2 /* IngredientsTableViewCell.swift */; };
+		632941122CA9B03C000142A2 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941022CA9B03C000142A2 /* IngredientsTableViewCell.xib */; };
+		632941132CA9B03C000142A2 /* HealthyDietDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941042CA9B03C000142A2 /* HealthyDietDetailViewController.swift */; };
+		632941142CA9B03C000142A2 /* HealthyDietDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941052CA9B03C000142A2 /* HealthyDietDetailViewController.xib */; };
+		632941362CA9B05F000142A2 /* HealthTestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941152CA9B05F000142A2 /* HealthTestDetailViewModel.swift */; };
+		632941372CA9B05F000142A2 /* HealthTestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941172CA9B05F000142A2 /* HealthTestDetailViewController.swift */; };
+		632941382CA9B05F000142A2 /* HealthTestDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941182CA9B05F000142A2 /* HealthTestDetailViewController.xib */; };
+		632941392CA9B05F000142A2 /* HealthTestAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329411A2CA9B05F000142A2 /* HealthTestAnswerModel.swift */; };
+		6329413A2CA9B05F000142A2 /* HealthTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329411B2CA9B05F000142A2 /* HealthTestModel.swift */; };
+		6329413B2CA9B05F000142A2 /* HealthTestQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329411C2CA9B05F000142A2 /* HealthTestQuestionModel.swift */; };
+		6329413C2CA9B05F000142A2 /* HealthTestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329411E2CA9B05F000142A2 /* HealthTestListViewModel.swift */; };
+		6329413D2CA9B05F000142A2 /* HealthTestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941202CA9B05F000142A2 /* HealthTestListCell.swift */; };
+		6329413E2CA9B05F000142A2 /* HealthTestListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941212CA9B05F000142A2 /* HealthTestListCell.xib */; };
+		6329413F2CA9B05F000142A2 /* HealthTestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941232CA9B05F000142A2 /* HealthTestListViewController.swift */; };
+		632941402CA9B05F000142A2 /* HealthTestListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941242CA9B05F000142A2 /* HealthTestListViewController.xib */; };
+		632941412CA9B05F000142A2 /* HealthTestQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941262CA9B05F000142A2 /* HealthTestQuestionViewModel.swift */; };
+		632941422CA9B05F000142A2 /* HealthTestQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941282CA9B05F000142A2 /* HealthTestQuestionCell.swift */; };
+		632941432CA9B05F000142A2 /* HealthTestQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941292CA9B05F000142A2 /* HealthTestQuestionCell.xib */; };
+		632941442CA9B05F000142A2 /* HealthTestQuestionContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329412A2CA9B05F000142A2 /* HealthTestQuestionContentCell.swift */; };
+		632941452CA9B05F000142A2 /* HealthTestQuestionContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6329412B2CA9B05F000142A2 /* HealthTestQuestionContentCell.xib */; };
+		632941462CA9B05F000142A2 /* HealthTestQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329412D2CA9B05F000142A2 /* HealthTestQuestionViewController.swift */; };
+		632941472CA9B05F000142A2 /* HealthTestQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6329412E2CA9B05F000142A2 /* HealthTestQuestionViewController.xib */; };
+		632941482CA9B05F000142A2 /* HealthTestResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941302CA9B05F000142A2 /* HealthTestResultViewModel.swift */; };
+		632941492CA9B05F000142A2 /* HealthTestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632941322CA9B05F000142A2 /* HealthTestResultViewController.swift */; };
+		6329414A2CA9B05F000142A2 /* HealthTestResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632941332CA9B05F000142A2 /* HealthTestResultViewController.xib */; };
+		6329414C2CA9B1D2000142A2 /* ResizeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329414B2CA9B1D2000142A2 /* ResizeTable.swift */; };
+		6329414E2CA9B32E000142A2 /* UIcontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329414D2CA9B32E000142A2 /* UIcontrol.swift */; };
+		632941502CA9B3A3000142A2 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329414F2CA9B3A3000142A2 /* NSMutableAttributedString.swift */; };
 		633115302C91C4CA008E7A3D /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331152F2C91C4CA008E7A3D /* TabbarViewController.swift */; };
 		6331153B2C91F66B008E7A3D /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331153A2C91F66B008E7A3D /* Extension + String.swift */; };
 		635640BB2C7F888200CCA8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635640BA2C7F888200CCA8A0 /* AppDelegate.swift */; };
@@ -21,8 +74,8 @@
 		6382D22E2C9346F90047E0CA /* ChatAIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D22C2C9346F90047E0CA /* ChatAIViewController.xib */; };
 		6382D2312C93470C0047E0CA /* BIMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D22F2C93470C0047E0CA /* BIMViewController.swift */; };
 		6382D2322C93470C0047E0CA /* BIMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D2302C93470C0047E0CA /* BIMViewController.xib */; };
-		6382D2352C93471A0047E0CA /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2332C93471A0047E0CA /* FeaturesViewController.swift */; };
-		6382D2362C93471A0047E0CA /* FeaturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D2342C93471A0047E0CA /* FeaturesViewController.xib */; };
+		6382D2352C93471A0047E0CA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2332C93471A0047E0CA /* RecommendViewController.swift */; };
+		6382D2362C93471A0047E0CA /* RecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D2342C93471A0047E0CA /* RecommendViewController.xib */; };
 		6382D23A2C93472C0047E0CA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2382C93472C0047E0CA /* SettingViewController.swift */; };
 		6382D23B2C93472C0047E0CA /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D2392C93472C0047E0CA /* SettingViewController.xib */; };
 		6382D2402C934C7A0047E0CA /* Extension + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D23F2C934C7A0047E0CA /* Extension + UIColor.swift */; };
@@ -33,11 +86,86 @@
 		6382D2A52C9EDA370047E0CA /* TabbarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2A42C9EDA370047E0CA /* TabbarType.swift */; };
 		6382D2AD2C9EE7250047E0CA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2AC2C9EE7250047E0CA /* BaseViewController.swift */; };
 		6382D2B02C9EE7BE0047E0CA /* VCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2AF2C9EE7BE0047E0CA /* VCService.swift */; };
+		6382D2D42CA332D90047E0CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6382D2D32CA332D90047E0CA /* GoogleService-Info.plist */; };
+		6382D2FA2CA9A0FA0047E0CA /* HeartBlogArticalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2F52CA9A0FA0047E0CA /* HeartBlogArticalModel.swift */; };
+		6382D2FB2CA9A0FA0047E0CA /* HeartBlogDietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2F62CA9A0FA0047E0CA /* HeartBlogDietModel.swift */; };
+		6382D2FC2CA9A0FA0047E0CA /* HeartBlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2F72CA9A0FA0047E0CA /* HeartBlogModel.swift */; };
+		6382D2FD2CA9A0FA0047E0CA /* HeartBlogTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2F82CA9A0FA0047E0CA /* HeartBlogTestModel.swift */; };
+		6382D3002CA9A1100047E0CA /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D2FE2CA9A1100047E0CA /* RecommendViewModel.swift */; };
+		6382D3132CA9A1190047E0CA /* RecommendDietContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D3012CA9A1190047E0CA /* RecommendDietContentCell.swift */; };
+		6382D3142CA9A1190047E0CA /* RecommendDietContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D3022CA9A1190047E0CA /* RecommendDietContentCell.xib */; };
+		6382D3152CA9A1190047E0CA /* RecommendTestContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D3032CA9A1190047E0CA /* RecommendTestContentCell.swift */; };
+		6382D3162CA9A1190047E0CA /* RecommendTestContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D3042CA9A1190047E0CA /* RecommendTestContentCell.xib */; };
+		6382D3172CA9A1190047E0CA /* RecommendTestPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D3062CA9A1190047E0CA /* RecommendTestPermissionView.swift */; };
+		6382D3182CA9A1190047E0CA /* RecommendTestPermissionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D3072CA9A1190047E0CA /* RecommendTestPermissionView.xib */; };
+		6382D3192CA9A1190047E0CA /* RecommendArticlesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D3092CA9A1190047E0CA /* RecommendArticlesCell.swift */; };
+		6382D31A2CA9A1190047E0CA /* RecommendArticlesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D30A2CA9A1190047E0CA /* RecommendArticlesCell.xib */; };
+		6382D31B2CA9A1190047E0CA /* RecommendArticlesContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D30B2CA9A1190047E0CA /* RecommendArticlesContentCell.swift */; };
+		6382D31C2CA9A1190047E0CA /* RecommendArticlesContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D30C2CA9A1190047E0CA /* RecommendArticlesContentCell.xib */; };
+		6382D31D2CA9A1190047E0CA /* RecommendDietCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D30D2CA9A1190047E0CA /* RecommendDietCell.swift */; };
+		6382D31E2CA9A1190047E0CA /* RecommendDietCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D30E2CA9A1190047E0CA /* RecommendDietCell.xib */; };
+		6382D31F2CA9A1190047E0CA /* RecommendTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D30F2CA9A1190047E0CA /* RecommendTestCell.swift */; };
+		6382D3202CA9A1190047E0CA /* RecommendTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6382D3102CA9A1190047E0CA /* RecommendTestCell.xib */; };
+		6382D3222CA9A4020047E0CA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D3212CA9A4020047E0CA /* Network.swift */; };
+		6382D3252CA9A44E0047E0CA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D3242CA9A44E0047E0CA /* FirebaseService.swift */; };
 		FB73C60F4E4C929B92E7F3E6 /* Pods_Sor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D0C75D6A612D0D664517FD /* Pods_Sor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EE754615EE4A012F85E7C27 /* Pods-Sor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sor.debug.xcconfig"; path = "Target Support Files/Pods-Sor/Pods-Sor.debug.xcconfig"; sourceTree = "<group>"; };
+		632940C92CA9A6CF000142A2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		632940CC2CA9A9CB000142A2 /* ArticlesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesModel.swift; sourceTree = "<group>"; };
+		632940CE2CA9A9CB000142A2 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		632940D02CA9A9CB000142A2 /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
+		632940D12CA9A9CB000142A2 /* ArticlesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlesTableViewCell.xib; sourceTree = "<group>"; };
+		632940D32CA9A9CB000142A2 /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		632940D42CA9A9CB000142A2 /* ArticlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlesViewController.xib; sourceTree = "<group>"; };
+		632940D62CA9A9CB000142A2 /* ArticlesDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesDetailViewModel.swift; sourceTree = "<group>"; };
+		632940D82CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesDetailBottomCardViewController.swift; sourceTree = "<group>"; };
+		632940D92CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlesDetailBottomCardViewController.xib; sourceTree = "<group>"; };
+		632940DC2CA9A9CB000142A2 /* ArticlesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesDetailViewController.swift; sourceTree = "<group>"; };
+		632940DD2CA9A9CB000142A2 /* ArticlesDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlesDetailViewController.xib; sourceTree = "<group>"; };
+		632940EB2CA9AA6D000142A2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		632940ED2CA9ACF5000142A2 /* Extension+Tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Tableview.swift"; sourceTree = "<group>"; };
+		632940EF2CA9AE60000142A2 /* Extension + Veiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Veiw.swift"; sourceTree = "<group>"; };
+		632940F12CA9AFB1000142A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		632940F32CA9B03C000142A2 /* ReceiptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
+		632940F52CA9B03C000142A2 /* HealthyDietViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthyDietViewModel.swift; sourceTree = "<group>"; };
+		632940F72CA9B03C000142A2 /* HealthyDietTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthyDietTableViewCell.swift; sourceTree = "<group>"; };
+		632940F82CA9B03C000142A2 /* HealthyDietTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthyDietTableViewCell.xib; sourceTree = "<group>"; };
+		632940FA2CA9B03C000142A2 /* HealthyDietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthyDietViewController.swift; sourceTree = "<group>"; };
+		632940FB2CA9B03C000142A2 /* HealthyDietViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthyDietViewController.xib; sourceTree = "<group>"; };
+		632940FD2CA9B03C000142A2 /* HealthyDietDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthyDietDetailViewModel.swift; sourceTree = "<group>"; };
+		632940FF2CA9B03C000142A2 /* CookStepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookStepTableViewCell.swift; sourceTree = "<group>"; };
+		632941002CA9B03C000142A2 /* CookStepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookStepTableViewCell.xib; sourceTree = "<group>"; };
+		632941012CA9B03C000142A2 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		632941022CA9B03C000142A2 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		632941042CA9B03C000142A2 /* HealthyDietDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthyDietDetailViewController.swift; sourceTree = "<group>"; };
+		632941052CA9B03C000142A2 /* HealthyDietDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthyDietDetailViewController.xib; sourceTree = "<group>"; };
+		632941152CA9B05F000142A2 /* HealthTestDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestDetailViewModel.swift; sourceTree = "<group>"; };
+		632941172CA9B05F000142A2 /* HealthTestDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestDetailViewController.swift; sourceTree = "<group>"; };
+		632941182CA9B05F000142A2 /* HealthTestDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestDetailViewController.xib; sourceTree = "<group>"; };
+		6329411A2CA9B05F000142A2 /* HealthTestAnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestAnswerModel.swift; sourceTree = "<group>"; };
+		6329411B2CA9B05F000142A2 /* HealthTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestModel.swift; sourceTree = "<group>"; };
+		6329411C2CA9B05F000142A2 /* HealthTestQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestQuestionModel.swift; sourceTree = "<group>"; };
+		6329411E2CA9B05F000142A2 /* HealthTestListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestListViewModel.swift; sourceTree = "<group>"; };
+		632941202CA9B05F000142A2 /* HealthTestListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestListCell.swift; sourceTree = "<group>"; };
+		632941212CA9B05F000142A2 /* HealthTestListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestListCell.xib; sourceTree = "<group>"; };
+		632941232CA9B05F000142A2 /* HealthTestListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestListViewController.swift; sourceTree = "<group>"; };
+		632941242CA9B05F000142A2 /* HealthTestListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestListViewController.xib; sourceTree = "<group>"; };
+		632941262CA9B05F000142A2 /* HealthTestQuestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestQuestionViewModel.swift; sourceTree = "<group>"; };
+		632941282CA9B05F000142A2 /* HealthTestQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestQuestionCell.swift; sourceTree = "<group>"; };
+		632941292CA9B05F000142A2 /* HealthTestQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestQuestionCell.xib; sourceTree = "<group>"; };
+		6329412A2CA9B05F000142A2 /* HealthTestQuestionContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestQuestionContentCell.swift; sourceTree = "<group>"; };
+		6329412B2CA9B05F000142A2 /* HealthTestQuestionContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestQuestionContentCell.xib; sourceTree = "<group>"; };
+		6329412D2CA9B05F000142A2 /* HealthTestQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestQuestionViewController.swift; sourceTree = "<group>"; };
+		6329412E2CA9B05F000142A2 /* HealthTestQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestQuestionViewController.xib; sourceTree = "<group>"; };
+		632941302CA9B05F000142A2 /* HealthTestResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestResultViewModel.swift; sourceTree = "<group>"; };
+		632941322CA9B05F000142A2 /* HealthTestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthTestResultViewController.swift; sourceTree = "<group>"; };
+		632941332CA9B05F000142A2 /* HealthTestResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTestResultViewController.xib; sourceTree = "<group>"; };
+		6329414B2CA9B1D2000142A2 /* ResizeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeTable.swift; sourceTree = "<group>"; };
+		6329414D2CA9B32E000142A2 /* UIcontrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcontrol.swift; sourceTree = "<group>"; };
+		6329414F2CA9B3A3000142A2 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		6331152F2C91C4CA008E7A3D /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		6331153A2C91F66B008E7A3D /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		635640B72C7F888200CCA8A0 /* Sor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,8 +181,8 @@
 		6382D22C2C9346F90047E0CA /* ChatAIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatAIViewController.xib; sourceTree = "<group>"; };
 		6382D22F2C93470C0047E0CA /* BIMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIMViewController.swift; sourceTree = "<group>"; };
 		6382D2302C93470C0047E0CA /* BIMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIMViewController.xib; sourceTree = "<group>"; };
-		6382D2332C93471A0047E0CA /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
-		6382D2342C93471A0047E0CA /* FeaturesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturesViewController.xib; sourceTree = "<group>"; };
+		6382D2332C93471A0047E0CA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		6382D2342C93471A0047E0CA /* RecommendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendViewController.xib; sourceTree = "<group>"; };
 		6382D2382C93472C0047E0CA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6382D2392C93472C0047E0CA /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		6382D23F2C934C7A0047E0CA /* Extension + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIColor.swift"; sourceTree = "<group>"; };
@@ -65,6 +193,28 @@
 		6382D2A42C9EDA370047E0CA /* TabbarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarType.swift; sourceTree = "<group>"; };
 		6382D2AC2C9EE7250047E0CA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6382D2AF2C9EE7BE0047E0CA /* VCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCService.swift; sourceTree = "<group>"; };
+		6382D2D32CA332D90047E0CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6382D2F52CA9A0FA0047E0CA /* HeartBlogArticalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBlogArticalModel.swift; sourceTree = "<group>"; };
+		6382D2F62CA9A0FA0047E0CA /* HeartBlogDietModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBlogDietModel.swift; sourceTree = "<group>"; };
+		6382D2F72CA9A0FA0047E0CA /* HeartBlogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBlogModel.swift; sourceTree = "<group>"; };
+		6382D2F82CA9A0FA0047E0CA /* HeartBlogTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBlogTestModel.swift; sourceTree = "<group>"; };
+		6382D2FE2CA9A1100047E0CA /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		6382D3012CA9A1190047E0CA /* RecommendDietContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendDietContentCell.swift; sourceTree = "<group>"; };
+		6382D3022CA9A1190047E0CA /* RecommendDietContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendDietContentCell.xib; sourceTree = "<group>"; };
+		6382D3032CA9A1190047E0CA /* RecommendTestContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTestContentCell.swift; sourceTree = "<group>"; };
+		6382D3042CA9A1190047E0CA /* RecommendTestContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTestContentCell.xib; sourceTree = "<group>"; };
+		6382D3062CA9A1190047E0CA /* RecommendTestPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTestPermissionView.swift; sourceTree = "<group>"; };
+		6382D3072CA9A1190047E0CA /* RecommendTestPermissionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTestPermissionView.xib; sourceTree = "<group>"; };
+		6382D3092CA9A1190047E0CA /* RecommendArticlesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendArticlesCell.swift; sourceTree = "<group>"; };
+		6382D30A2CA9A1190047E0CA /* RecommendArticlesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendArticlesCell.xib; sourceTree = "<group>"; };
+		6382D30B2CA9A1190047E0CA /* RecommendArticlesContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendArticlesContentCell.swift; sourceTree = "<group>"; };
+		6382D30C2CA9A1190047E0CA /* RecommendArticlesContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendArticlesContentCell.xib; sourceTree = "<group>"; };
+		6382D30D2CA9A1190047E0CA /* RecommendDietCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendDietCell.swift; sourceTree = "<group>"; };
+		6382D30E2CA9A1190047E0CA /* RecommendDietCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendDietCell.xib; sourceTree = "<group>"; };
+		6382D30F2CA9A1190047E0CA /* RecommendTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTestCell.swift; sourceTree = "<group>"; };
+		6382D3102CA9A1190047E0CA /* RecommendTestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTestCell.xib; sourceTree = "<group>"; };
+		6382D3212CA9A4020047E0CA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		6382D3242CA9A44E0047E0CA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		DBF29F482F1A90CFB4E45685 /* Pods-Sor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sor.release.xcconfig"; path = "Target Support Files/Pods-Sor/Pods-Sor.release.xcconfig"; sourceTree = "<group>"; };
 		F3D0C75D6A612D0D664517FD /* Pods_Sor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +241,288 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		632940C82CA9A6B5000142A2 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				632940C92CA9A6CF000142A2 /* ImageLoader.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		632940CD2CA9A9CB000142A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				632940CC2CA9A9CB000142A2 /* ArticlesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		632940CF2CA9A9CB000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632940CE2CA9A9CB000142A2 /* ArticlesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632940D22CA9A9CB000142A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632940D02CA9A9CB000142A2 /* ArticlesTableViewCell.swift */,
+				632940D12CA9A9CB000142A2 /* ArticlesTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		632940D52CA9A9CB000142A2 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				632940CD2CA9A9CB000142A2 /* Model */,
+				632940CF2CA9A9CB000142A2 /* ViewModel */,
+				632940D22CA9A9CB000142A2 /* Views */,
+				632940D32CA9A9CB000142A2 /* ArticlesViewController.swift */,
+				632940D42CA9A9CB000142A2 /* ArticlesViewController.xib */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		632940D72CA9A9CB000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632940D62CA9A9CB000142A2 /* ArticlesDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632940DA2CA9A9CB000142A2 /* ArticlesDetailBottomCard */ = {
+			isa = PBXGroup;
+			children = (
+				632940D82CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.swift */,
+				632940D92CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.xib */,
+			);
+			path = ArticlesDetailBottomCard;
+			sourceTree = "<group>";
+		};
+		632940DB2CA9A9CB000142A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632940DA2CA9A9CB000142A2 /* ArticlesDetailBottomCard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		632940DE2CA9A9CB000142A2 /* ArticlesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				632940D72CA9A9CB000142A2 /* ViewModel */,
+				632940DB2CA9A9CB000142A2 /* Views */,
+				632940DC2CA9A9CB000142A2 /* ArticlesDetailViewController.swift */,
+				632940DD2CA9A9CB000142A2 /* ArticlesDetailViewController.xib */,
+			);
+			path = ArticlesDetail;
+			sourceTree = "<group>";
+		};
+		632940DF2CA9A9CB000142A2 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				632940D52CA9A9CB000142A2 /* Articles */,
+				632940DE2CA9A9CB000142A2 /* ArticlesDetail */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		632940F42CA9B03C000142A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				632940F32CA9B03C000142A2 /* ReceiptModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		632940F62CA9B03C000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632940F52CA9B03C000142A2 /* HealthyDietViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632940F92CA9B03C000142A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632940F72CA9B03C000142A2 /* HealthyDietTableViewCell.swift */,
+				632940F82CA9B03C000142A2 /* HealthyDietTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		632940FC2CA9B03C000142A2 /* HealthyDiet */ = {
+			isa = PBXGroup;
+			children = (
+				632940F42CA9B03C000142A2 /* Model */,
+				632940F62CA9B03C000142A2 /* ViewModel */,
+				632940F92CA9B03C000142A2 /* Views */,
+				632940FA2CA9B03C000142A2 /* HealthyDietViewController.swift */,
+				632940FB2CA9B03C000142A2 /* HealthyDietViewController.xib */,
+			);
+			path = HealthyDiet;
+			sourceTree = "<group>";
+		};
+		632940FE2CA9B03C000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632940FD2CA9B03C000142A2 /* HealthyDietDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632941032CA9B03C000142A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632940FF2CA9B03C000142A2 /* CookStepTableViewCell.swift */,
+				632941002CA9B03C000142A2 /* CookStepTableViewCell.xib */,
+				632941012CA9B03C000142A2 /* IngredientsTableViewCell.swift */,
+				632941022CA9B03C000142A2 /* IngredientsTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		632941062CA9B03C000142A2 /* HealthyDietDetail */ = {
+			isa = PBXGroup;
+			children = (
+				632940FE2CA9B03C000142A2 /* ViewModel */,
+				632941032CA9B03C000142A2 /* Views */,
+				632941042CA9B03C000142A2 /* HealthyDietDetailViewController.swift */,
+				632941052CA9B03C000142A2 /* HealthyDietDetailViewController.xib */,
+			);
+			path = HealthyDietDetail;
+			sourceTree = "<group>";
+		};
+		632941072CA9B03C000142A2 /* HealthyDiet */ = {
+			isa = PBXGroup;
+			children = (
+				632940FC2CA9B03C000142A2 /* HealthyDiet */,
+				632941062CA9B03C000142A2 /* HealthyDietDetail */,
+			);
+			path = HealthyDiet;
+			sourceTree = "<group>";
+		};
+		632941162CA9B05F000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632941152CA9B05F000142A2 /* HealthTestDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632941192CA9B05F000142A2 /* HealthTestDetail */ = {
+			isa = PBXGroup;
+			children = (
+				632941162CA9B05F000142A2 /* ViewModel */,
+				632941172CA9B05F000142A2 /* HealthTestDetailViewController.swift */,
+				632941182CA9B05F000142A2 /* HealthTestDetailViewController.xib */,
+			);
+			path = HealthTestDetail;
+			sourceTree = "<group>";
+		};
+		6329411D2CA9B05F000142A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6329411A2CA9B05F000142A2 /* HealthTestAnswerModel.swift */,
+				6329411B2CA9B05F000142A2 /* HealthTestModel.swift */,
+				6329411C2CA9B05F000142A2 /* HealthTestQuestionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6329411F2CA9B05F000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6329411E2CA9B05F000142A2 /* HealthTestListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632941222CA9B05F000142A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632941202CA9B05F000142A2 /* HealthTestListCell.swift */,
+				632941212CA9B05F000142A2 /* HealthTestListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		632941252CA9B05F000142A2 /* HealthTestList */ = {
+			isa = PBXGroup;
+			children = (
+				6329411D2CA9B05F000142A2 /* Model */,
+				6329411F2CA9B05F000142A2 /* ViewModel */,
+				632941222CA9B05F000142A2 /* Views */,
+				632941232CA9B05F000142A2 /* HealthTestListViewController.swift */,
+				632941242CA9B05F000142A2 /* HealthTestListViewController.xib */,
+			);
+			path = HealthTestList;
+			sourceTree = "<group>";
+		};
+		632941272CA9B05F000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632941262CA9B05F000142A2 /* HealthTestQuestionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6329412C2CA9B05F000142A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632941282CA9B05F000142A2 /* HealthTestQuestionCell.swift */,
+				632941292CA9B05F000142A2 /* HealthTestQuestionCell.xib */,
+				6329412A2CA9B05F000142A2 /* HealthTestQuestionContentCell.swift */,
+				6329412B2CA9B05F000142A2 /* HealthTestQuestionContentCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6329412F2CA9B05F000142A2 /* HealthTestQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				632941272CA9B05F000142A2 /* ViewModel */,
+				6329412C2CA9B05F000142A2 /* Views */,
+				6329412D2CA9B05F000142A2 /* HealthTestQuestionViewController.swift */,
+				6329412E2CA9B05F000142A2 /* HealthTestQuestionViewController.xib */,
+			);
+			path = HealthTestQuestion;
+			sourceTree = "<group>";
+		};
+		632941312CA9B05F000142A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				632941302CA9B05F000142A2 /* HealthTestResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		632941342CA9B05F000142A2 /* HealthTestResult */ = {
+			isa = PBXGroup;
+			children = (
+				632941312CA9B05F000142A2 /* ViewModel */,
+				632941322CA9B05F000142A2 /* HealthTestResultViewController.swift */,
+				632941332CA9B05F000142A2 /* HealthTestResultViewController.xib */,
+			);
+			path = HealthTestResult;
+			sourceTree = "<group>";
+		};
+		632941352CA9B05F000142A2 /* HealthTest */ = {
+			isa = PBXGroup;
+			children = (
+				632941192CA9B05F000142A2 /* HealthTestDetail */,
+				632941252CA9B05F000142A2 /* HealthTestList */,
+				6329412F2CA9B05F000142A2 /* HealthTestQuestion */,
+				632941342CA9B05F000142A2 /* HealthTestResult */,
+			);
+			path = HealthTest;
+			sourceTree = "<group>";
+		};
 		6331152E2C91C4B8008E7A3D /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +537,14 @@
 			isa = PBXGroup;
 			children = (
 				6331153A2C91F66B008E7A3D /* Extension + String.swift */,
+				6329414D2CA9B32E000142A2 /* UIcontrol.swift */,
+				632940ED2CA9ACF5000142A2 /* Extension+Tableview.swift */,
 				6382D23F2C934C7A0047E0CA /* Extension + UIColor.swift */,
+				6329414F2CA9B3A3000142A2 /* NSMutableAttributedString.swift */,
 				6382D2A22C9EB7330047E0CA /* Extension + Date.swift */,
+				6382D3212CA9A4020047E0CA /* Network.swift */,
+				632940EF2CA9AE60000142A2 /* Extension + Veiw.swift */,
+				6329414B2CA9B1D2000142A2 /* ResizeTable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -132,8 +570,7 @@
 		635640B92C7F888200CCA8A0 /* Sor */ = {
 			isa = PBXGroup;
 			children = (
-				635640BA2C7F888200CCA8A0 /* AppDelegate.swift */,
-				635640BC2C7F888200CCA8A0 /* SceneDelegate.swift */,
+				6382D2D22CA3323C0047E0CA /* AppDelegate */,
 				6382D2412C9350870047E0CA /* R.generated.swift */,
 				633115392C91F651008E7A3D /* Extension */,
 				6382D29D2C9EB6E80047E0CA /* Common */,
@@ -143,6 +580,7 @@
 				635640C32C7F888400CCA8A0 /* Assets.xcassets */,
 				635640C52C7F888400CCA8A0 /* LaunchScreen.storyboard */,
 				635640C82C7F888400CCA8A0 /* Info.plist */,
+				6382D2D32CA332D90047E0CA /* GoogleService-Info.plist */,
 			);
 			path = Sor;
 			sourceTree = "<group>";
@@ -151,9 +589,12 @@
 			isa = PBXGroup;
 			children = (
 				6382D2262C93467A0047E0CA /* Home */,
-				6382D22A2C9346B20047E0CA /* ChatExpert */,
+				6382D22A2C9346B20047E0CA /* ChatAI */,
+				632941072CA9B03C000142A2 /* HealthyDiet */,
+				632941352CA9B05F000142A2 /* HealthTest */,
+				632940DF2CA9A9CB000142A2 /* Articles */,
 				6382D2272C9346880047E0CA /* BMI */,
-				6382D2292C9346A20047E0CA /* ChatPDF */,
+				6382D2292C9346A20047E0CA /* Features */,
 				6382D2282C9346960047E0CA /* Setting */,
 			);
 			path = UIScreen;
@@ -186,22 +627,25 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		6382D2292C9346A20047E0CA /* ChatPDF */ = {
+		6382D2292C9346A20047E0CA /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				6382D2332C93471A0047E0CA /* FeaturesViewController.swift */,
-				6382D2342C93471A0047E0CA /* FeaturesViewController.xib */,
+				6382D2F92CA9A0FA0047E0CA /* Model */,
+				6382D2FF2CA9A1100047E0CA /* ViewModel */,
+				6382D3122CA9A1190047E0CA /* Views */,
+				6382D2332C93471A0047E0CA /* RecommendViewController.swift */,
+				6382D2342C93471A0047E0CA /* RecommendViewController.xib */,
 			);
-			path = ChatPDF;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		6382D22A2C9346B20047E0CA /* ChatExpert */ = {
+		6382D22A2C9346B20047E0CA /* ChatAI */ = {
 			isa = PBXGroup;
 			children = (
 				6382D22B2C9346F90047E0CA /* ChatAIViewController.swift */,
 				6382D22C2C9346F90047E0CA /* ChatAIViewController.xib */,
 			);
-			path = ChatExpert;
+			path = ChatAI;
 			sourceTree = "<group>";
 		};
 		6382D23E2C9347590047E0CA /* Base */ = {
@@ -215,8 +659,12 @@
 		6382D29D2C9EB6E80047E0CA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				632940C82CA9A6B5000142A2 /* ImageLoader */,
+				6382D3232CA9A43B0047E0CA /* FirebaseService */,
 				6382D2AE2C9EE7A60047E0CA /* DatePicker */,
 				6382D2B12C9EE81F0047E0CA /* ServiceCtrl */,
+				632940EB2CA9AA6D000142A2 /* Common.swift */,
+				632940F12CA9AFB1000142A2 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -236,6 +684,87 @@
 				6382D2AF2C9EE7BE0047E0CA /* VCService.swift */,
 			);
 			path = ServiceCtrl;
+			sourceTree = "<group>";
+		};
+		6382D2D22CA3323C0047E0CA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				635640BA2C7F888200CCA8A0 /* AppDelegate.swift */,
+				635640BC2C7F888200CCA8A0 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6382D2F92CA9A0FA0047E0CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6382D2F52CA9A0FA0047E0CA /* HeartBlogArticalModel.swift */,
+				6382D2F62CA9A0FA0047E0CA /* HeartBlogDietModel.swift */,
+				6382D2F72CA9A0FA0047E0CA /* HeartBlogModel.swift */,
+				6382D2F82CA9A0FA0047E0CA /* HeartBlogTestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6382D2FF2CA9A1100047E0CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6382D2FE2CA9A1100047E0CA /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6382D3052CA9A1190047E0CA /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				6382D3012CA9A1190047E0CA /* RecommendDietContentCell.swift */,
+				6382D3022CA9A1190047E0CA /* RecommendDietContentCell.xib */,
+				6382D3032CA9A1190047E0CA /* RecommendTestContentCell.swift */,
+				6382D3042CA9A1190047E0CA /* RecommendTestContentCell.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		6382D3082CA9A1190047E0CA /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				6382D3062CA9A1190047E0CA /* RecommendTestPermissionView.swift */,
+				6382D3072CA9A1190047E0CA /* RecommendTestPermissionView.xib */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		6382D3112CA9A1190047E0CA /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				6382D3092CA9A1190047E0CA /* RecommendArticlesCell.swift */,
+				6382D30A2CA9A1190047E0CA /* RecommendArticlesCell.xib */,
+				6382D30B2CA9A1190047E0CA /* RecommendArticlesContentCell.swift */,
+				6382D30C2CA9A1190047E0CA /* RecommendArticlesContentCell.xib */,
+				6382D30D2CA9A1190047E0CA /* RecommendDietCell.swift */,
+				6382D30E2CA9A1190047E0CA /* RecommendDietCell.xib */,
+				6382D30F2CA9A1190047E0CA /* RecommendTestCell.swift */,
+				6382D3102CA9A1190047E0CA /* RecommendTestCell.xib */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		6382D3122CA9A1190047E0CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6382D3052CA9A1190047E0CA /* Collection */,
+				6382D3082CA9A1190047E0CA /* Permission */,
+				6382D3112CA9A1190047E0CA /* Table */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6382D3232CA9A43B0047E0CA /* FirebaseService */ = {
+			isa = PBXGroup;
+			children = (
+				6382D3242CA9A44E0047E0CA /* FirebaseService.swift */,
+			);
+			path = FirebaseService;
 			sourceTree = "<group>";
 		};
 		A295714E00A0BEAEC87C28E4 /* Frameworks */ = {
@@ -313,14 +842,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632941142CA9B03C000142A2 /* HealthyDietDetailViewController.xib in Resources */,
+				6382D3202CA9A1190047E0CA /* RecommendTestCell.xib in Resources */,
+				632940E52CA9A9CB000142A2 /* ArticlesViewController.xib in Resources */,
+				6329414A2CA9B05F000142A2 /* HealthTestResultViewController.xib in Resources */,
+				632941452CA9B05F000142A2 /* HealthTestQuestionContentCell.xib in Resources */,
+				632940E32CA9A9CB000142A2 /* ArticlesTableViewCell.xib in Resources */,
+				632941432CA9B05F000142A2 /* HealthTestQuestionCell.xib in Resources */,
+				6382D3162CA9A1190047E0CA /* RecommendTestContentCell.xib in Resources */,
 				6382D2A12C9EB7120047E0CA /* DateCollectionViewCell.xib in Resources */,
 				6382D23B2C93472C0047E0CA /* SettingViewController.xib in Resources */,
+				6382D2D42CA332D90047E0CA /* GoogleService-Info.plist in Resources */,
+				6329410B2CA9B03C000142A2 /* HealthyDietTableViewCell.xib in Resources */,
+				6329410D2CA9B03C000142A2 /* HealthyDietViewController.xib in Resources */,
+				632941102CA9B03C000142A2 /* CookStepTableViewCell.xib in Resources */,
 				6382D2322C93470C0047E0CA /* BIMViewController.xib in Resources */,
+				6382D3142CA9A1190047E0CA /* RecommendDietContentCell.xib in Resources */,
+				6382D31C2CA9A1190047E0CA /* RecommendArticlesContentCell.xib in Resources */,
+				6382D3182CA9A1190047E0CA /* RecommendTestPermissionView.xib in Resources */,
 				6382D22E2C9346F90047E0CA /* ChatAIViewController.xib in Resources */,
+				632940EA2CA9A9CB000142A2 /* ArticlesDetailViewController.xib in Resources */,
+				632941382CA9B05F000142A2 /* HealthTestDetailViewController.xib in Resources */,
+				6382D31A2CA9A1190047E0CA /* RecommendArticlesCell.xib in Resources */,
 				635640C42C7F888400CCA8A0 /* Assets.xcassets in Resources */,
+				6329413E2CA9B05F000142A2 /* HealthTestListCell.xib in Resources */,
 				635640C72C7F888400CCA8A0 /* Base in Resources */,
+				632941472CA9B05F000142A2 /* HealthTestQuestionViewController.xib in Resources */,
 				6382D2252C9346720047E0CA /* HomeViewController.xib in Resources */,
-				6382D2362C93471A0047E0CA /* FeaturesViewController.xib in Resources */,
+				632941122CA9B03C000142A2 /* IngredientsTableViewCell.xib in Resources */,
+				632941402CA9B05F000142A2 /* HealthTestListViewController.xib in Resources */,
+				6382D2362C93471A0047E0CA /* RecommendViewController.xib in Resources */,
+				6382D31E2CA9A1190047E0CA /* RecommendDietCell.xib in Resources */,
+				632940E82CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,23 +945,74 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6382D2FB2CA9A0FA0047E0CA /* HeartBlogDietModel.swift in Sources */,
 				6382D22D2C9346F90047E0CA /* ChatAIViewController.swift in Sources */,
+				6382D31B2CA9A1190047E0CA /* RecommendArticlesContentCell.swift in Sources */,
+				6382D31F2CA9A1190047E0CA /* RecommendTestCell.swift in Sources */,
+				632941372CA9B05F000142A2 /* HealthTestDetailViewController.swift in Sources */,
 				6382D2312C93470C0047E0CA /* BIMViewController.swift in Sources */,
+				6382D3002CA9A1100047E0CA /* RecommendViewModel.swift in Sources */,
+				6329413B2CA9B05F000142A2 /* HealthTestQuestionModel.swift in Sources */,
+				632941492CA9B05F000142A2 /* HealthTestResultViewController.swift in Sources */,
+				632941392CA9B05F000142A2 /* HealthTestAnswerModel.swift in Sources */,
+				6329413D2CA9B05F000142A2 /* HealthTestListCell.swift in Sources */,
+				632940CA2CA9A6CF000142A2 /* ImageLoader.swift in Sources */,
 				6331153B2C91F66B008E7A3D /* Extension + String.swift in Sources */,
+				632940F22CA9AFB1000142A2 /* Constants.swift in Sources */,
+				632941462CA9B05F000142A2 /* HealthTestQuestionViewController.swift in Sources */,
+				632940EC2CA9AA6D000142A2 /* Common.swift in Sources */,
+				6329413F2CA9B05F000142A2 /* HealthTestListViewController.swift in Sources */,
+				632940E02CA9A9CB000142A2 /* ArticlesModel.swift in Sources */,
+				632941362CA9B05F000142A2 /* HealthTestDetailViewModel.swift in Sources */,
+				6329414E2CA9B32E000142A2 /* UIcontrol.swift in Sources */,
+				632941502CA9B3A3000142A2 /* NSMutableAttributedString.swift in Sources */,
+				6382D3132CA9A1190047E0CA /* RecommendDietContentCell.swift in Sources */,
+				6329414C2CA9B1D2000142A2 /* ResizeTable.swift in Sources */,
 				635640BB2C7F888200CCA8A0 /* AppDelegate.swift in Sources */,
+				632941442CA9B05F000142A2 /* HealthTestQuestionContentCell.swift in Sources */,
+				6329413A2CA9B05F000142A2 /* HealthTestModel.swift in Sources */,
 				633115302C91C4CA008E7A3D /* TabbarViewController.swift in Sources */,
+				6329410E2CA9B03C000142A2 /* HealthyDietDetailViewModel.swift in Sources */,
 				6382D23A2C93472C0047E0CA /* SettingViewController.swift in Sources */,
+				6382D3192CA9A1190047E0CA /* RecommendArticlesCell.swift in Sources */,
 				6382D2202C93458E0047E0CA /* TabbarContentView.swift in Sources */,
+				632940E22CA9A9CB000142A2 /* ArticlesTableViewCell.swift in Sources */,
+				632940E12CA9A9CB000142A2 /* ArticlesViewModel.swift in Sources */,
+				6329410F2CA9B03C000142A2 /* CookStepTableViewCell.swift in Sources */,
 				6382D2402C934C7A0047E0CA /* Extension + UIColor.swift in Sources */,
-				6382D2352C93471A0047E0CA /* FeaturesViewController.swift in Sources */,
+				6382D2352C93471A0047E0CA /* RecommendViewController.swift in Sources */,
 				6382D2A32C9EB7330047E0CA /* Extension + Date.swift in Sources */,
+				632941422CA9B05F000142A2 /* HealthTestQuestionCell.swift in Sources */,
+				632941082CA9B03C000142A2 /* ReceiptModel.swift in Sources */,
+				6382D3252CA9A44E0047E0CA /* FirebaseService.swift in Sources */,
+				632940F02CA9AE60000142A2 /* Extension + Veiw.swift in Sources */,
+				632940E72CA9A9CB000142A2 /* ArticlesDetailBottomCardViewController.swift in Sources */,
+				632941092CA9B03C000142A2 /* HealthyDietViewModel.swift in Sources */,
+				632940E42CA9A9CB000142A2 /* ArticlesViewController.swift in Sources */,
+				632940E62CA9A9CB000142A2 /* ArticlesDetailViewModel.swift in Sources */,
 				6382D2A52C9EDA370047E0CA /* TabbarType.swift in Sources */,
+				6382D3152CA9A1190047E0CA /* RecommendTestContentCell.swift in Sources */,
+				6329410C2CA9B03C000142A2 /* HealthyDietViewController.swift in Sources */,
+				632941132CA9B03C000142A2 /* HealthyDietDetailViewController.swift in Sources */,
+				6382D3172CA9A1190047E0CA /* RecommendTestPermissionView.swift in Sources */,
 				635640BD2C7F888200CCA8A0 /* SceneDelegate.swift in Sources */,
+				6329410A2CA9B03C000142A2 /* HealthyDietTableViewCell.swift in Sources */,
+				6382D3222CA9A4020047E0CA /* Network.swift in Sources */,
+				632941412CA9B05F000142A2 /* HealthTestQuestionViewModel.swift in Sources */,
 				6382D2242C9346720047E0CA /* HomeViewController.swift in Sources */,
+				6382D2FA2CA9A0FA0047E0CA /* HeartBlogArticalModel.swift in Sources */,
+				632941112CA9B03C000142A2 /* IngredientsTableViewCell.swift in Sources */,
+				632940E92CA9A9CB000142A2 /* ArticlesDetailViewController.swift in Sources */,
+				6382D2FD2CA9A0FA0047E0CA /* HeartBlogTestModel.swift in Sources */,
 				6382D2B02C9EE7BE0047E0CA /* VCService.swift in Sources */,
+				6382D2FC2CA9A0FA0047E0CA /* HeartBlogModel.swift in Sources */,
 				6382D2AD2C9EE7250047E0CA /* BaseViewController.swift in Sources */,
+				632940EE2CA9ACF5000142A2 /* Extension+Tableview.swift in Sources */,
+				632941482CA9B05F000142A2 /* HealthTestResultViewModel.swift in Sources */,
 				6382D2422C9350870047E0CA /* R.generated.swift in Sources */,
+				6382D31D2CA9A1190047E0CA /* RecommendDietCell.swift in Sources */,
 				6382D29F2C9EB7080047E0CA /* DateCollectionViewCell.swift in Sources */,
+				6329413C2CA9B05F000142A2 /* HealthTestListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
