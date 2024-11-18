@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="224" id="KGk-i7-Jjw" customClass="HeartRateResultCell" customModule="PulseTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="426" height="224"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_heart_result_dot" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-Dw-fix">
+                        <rect key="frame" x="6" y="22" width="7" height="7"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="7" id="ITp-RJ-83r"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue to maintain a healthy lifestyle and take advantage of the app’s features to optimize your health." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJG-KZ-N8r">
+                        <rect key="frame" x="23" y="16.000000000000004" width="403" height="57.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.14117647058823529" green="0.18823529411764706" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kJG-KZ-N8r" secondAttribute="bottom" priority="750" id="6JM-hV-gBm"/>
+                    <constraint firstAttribute="trailing" secondItem="kJG-KZ-N8r" secondAttribute="trailing" id="6WD-cz-cFg"/>
+                    <constraint firstItem="kJG-KZ-N8r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="7mU-VQ-8Zd"/>
+                    <constraint firstItem="t0f-Dw-fix" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="8UF-gB-OdO"/>
+                    <constraint firstItem="kJG-KZ-N8r" firstAttribute="leading" secondItem="t0f-Dw-fix" secondAttribute="trailing" constant="10" id="KsS-4f-x52"/>
+                    <constraint firstItem="t0f-Dw-fix" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="qrY-o7-6b6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblTitle" destination="kJG-KZ-N8r" id="pp4-vw-31s"/>
+            </connections>
+            <point key="canvasLocation" x="210.68702290076334" y="52.112676056338032"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_heart_result_dot" width="7" height="7"/>
+    </resources>
+</document>

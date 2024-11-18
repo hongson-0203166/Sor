@@ -1,8 +1,8 @@
 //
 //  ReceiptModel.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Admin on 25/06/2024.
+//  Created by Phạm Hồng Sơn on 15/09/2024.
 //
 
 import Foundation

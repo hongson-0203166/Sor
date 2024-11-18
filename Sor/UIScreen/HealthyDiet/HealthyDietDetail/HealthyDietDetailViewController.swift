@@ -1,8 +1,8 @@
 //
 //  HealthyDietDetailViewController.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Admin on 24/06/2024.
+//  Created by Phạm Hồng Sơn on 17/09/2024.
 //
 
 import UIKit
@@ -45,14 +45,14 @@ class HealthyDietDetailViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        ingredientsTableView.roundCorners(topLeft: 16, topRight: 16, bottomLeft: 16, bottomRight: 16)
-//        cookStepTableView.roundCorners(topLeft: 16, topRight: 16, bottomLeft: 16, bottomRight: 16)
-//        nutritionView.roundCorners(topLeft: 16, topRight: 16, bottomLeft: 16, bottomRight: 16)
+        ingredientsTableView.roundCorners(topLeft: 16, topRight: 16, bottomLeft: 16, bottomRight: 16)
+        cookStepTableView.roundCorners(topLeft: 16, topRight: 16, bottomLeft: 16, bottomRight: 16)
+        nutritionView.roundCorners(topLeft: 16, topRight: 16, bottomLeft: 16, bottomRight: 16)
     }
     
     override func configView() {
         setupView()
-//        tagView.roundCorners(topLeft: 12, topRight: 12, bottomLeft: 12, bottomRight: 12)
+        tagView.roundCorners(topLeft: 12, topRight: 12, bottomLeft: 12, bottomRight: 12)
         
     }
     
@@ -77,40 +77,35 @@ extension HealthyDietDetailViewController {
         foodImageView.loadImageWithUrl(receiptModel.image)
         
         foodLabel.text = receiptModel.name
-//        foodLabel.textColor = R.color.color_152238()
-//        foodLabel.font = R.font.outfitSemiBold(size: 24)
+        foodLabel.textColor = R.color.color_152238()
         foodLabel.numberOfLines = 0
         
         tagLabel.text = receiptModel.category?.rawValue
         tagLabel.textColor = .white
-//        tagLabel.font = R.font.outfitMedium(size: 14)
         
         caloriesCountLabel.text = String(receiptModel.calo ?? 0)
-//        caloriesCountLabel.textColor = R.color.color_243044()
-//        caloriesCountLabel.font = R.font.outfitBold(size: 24)
+        caloriesCountLabel.textColor = R.color.color_243044()
         
         timeCostCountLabel.text = String(receiptModel.timeCost ?? 0)
-//        timeCostCountLabel.textColor = R.color.color_243044()
-//        timeCostCountLabel.font = R.font.outfitBold(size: 24)
+        timeCostCountLabel.textColor = R.color.color_243044()
         
         serveCountLabel.text = String(receiptModel.serve ?? 0)
-//        serveCountLabel.textColor = R.color.color_243044()
-//        serveCountLabel.font = R.font.outfitBold(size: 24)
+        serveCountLabel.textColor = R.color.color_243044()
         
         proteinCountLabel.text = "\(receiptModel.protein ?? 0) g"
-//        proteinCountLabel.textColor = R.color.color_243044()
+        proteinCountLabel.textColor = R.color.color_243044()
 //        proteinCountLabel.font = R.font.outfitMedium(size: 16)
         
         sodiumCountLabel.text = "\(receiptModel.sodium ?? 0) mg"
-//        sodiumCountLabel.textColor = R.color.color_243044()
+        sodiumCountLabel.textColor = R.color.color_243044()
 //        sodiumCountLabel.font = R.font.outfitMedium(size: 16)
         
         fatCountLabel.text = "\(receiptModel.fat ?? 0) g"
-//        fatCountLabel.textColor = R.color.color_243044()
+        fatCountLabel.textColor = R.color.color_243044()
 //        fatCountLabel.font = R.font.outfitMedium(size: 16)
         
         sugarCountLabel.text = "\(receiptModel.sugar ?? 0) g"
-//        sugarCountLabel.textColor = R.color.color_243044()
+        sugarCountLabel.textColor = R.color.color_243044()
 //        sugarCountLabel.font = R.font.outfitMedium(size: 16)
         
         

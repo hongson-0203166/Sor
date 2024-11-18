@@ -34,15 +34,17 @@ class VCService {
         parentVC?.present(vc, animated: animated, completion: completion)
     }
     
-    static func present(controller: UIViewController,
-                        fromController: UIViewController? = nil,
-                        prepare: ((_ vc: UIViewController) -> Void)? = nil,
-                        animated: Bool = true,
-                        completion: (() -> Void)? = nil) {
-        prepare?(controller)
-        let parentVC = fromController ?? UIViewController.topViewController()
-        parentVC?.present(controller, animated: animated, completion: completion)
-    }
+  static func present(controller: UIViewController,
+                      fromController: UIViewController? = nil,
+                      presentStyle: UIModalPresentationStyle = .popover,
+                      prepare: ((_ vc: UIViewController) -> Void)? = nil,
+                      animated: Bool = true,
+                      completion: (() -> Void)? = nil) {
+      prepare?(controller)
+      controller.modalPresentationStyle = presentStyle
+      let parentVC = fromController ?? UIViewController.topViewController()
+      parentVC?.presentWithCustomTransparent(controller, animated: animated, completion: completion)
+  }
     
     static func push(controller: UIViewController,
                      fromController: UIViewController? = nil,

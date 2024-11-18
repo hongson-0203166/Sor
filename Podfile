@@ -12,7 +12,7 @@ pod 'Firebase/Database'
 pod 'SnapKit', '5.6.0'
 pod 'lottie-ios', '4.4.3'
 pod 'SDWebImage', '5.19.2'
-
+pod 'RealmSwift', '~>10'
 end
 
 post_install do |installer|

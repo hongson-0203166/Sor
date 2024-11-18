@@ -2,7 +2,7 @@
 //  ResizeTable.swift
 //  Sor
 //
-//  Created by Phạm Hồng Sơn on 29/09/2024.
+//  Created by Phạm Hồng Sơn on 15/09/2024.
 //
 
 import UIKit

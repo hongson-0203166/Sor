@@ -1,8 +1,8 @@
 //
-//  CookStepTableViewCell.swift
-//  HeartCare
+//  CookStepTableViewCell
+//  Sor
 //
-//  Created by Admin on 25/06/2024.
+//  Created by Phạm Hồng Sơn on 29/09/2024.
 //
 
 import UIKit

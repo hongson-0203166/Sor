@@ -1,8 +1,8 @@
 //
 //  RecommendViewModel.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Tran Dat on 17/04/2023.
+//  Created by Phạm Hồng Sơn on 30/09/2024.
 //
 
 import UIKit

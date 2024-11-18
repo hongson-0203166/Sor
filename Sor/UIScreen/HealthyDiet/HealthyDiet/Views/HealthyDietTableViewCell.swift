@@ -1,8 +1,8 @@
 //
-//  HealthyDietTableViewCell.swift
-//  HeartCare
+//  Extension+Tableview.swift
+//  Sor
 //
-//  Created by Admin on 21/06/2024.
+//  Created by Phạm Hồng Sơn on 15/09/2024.
 //
 
 import UIKit

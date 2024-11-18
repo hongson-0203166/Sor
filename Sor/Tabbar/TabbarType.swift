@@ -66,7 +66,7 @@ enum TabbarType: CaseIterable {
         case .chatAI:
             return ChatAIViewController()
         case .bmi:
-            return BIMViewController()
+            return PulseViewController()
         case .features:
             return RecommendViewController()
         case .settings:

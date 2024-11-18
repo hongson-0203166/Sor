@@ -1,8 +1,8 @@
 //
 //  RecommendArticlesContentCell.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Admin on 24/6/24.
+//  Created by Phạm Hồng Sơn on 30/09/2024.
 //
 
 import UIKit

@@ -1,8 +1,8 @@
 //
 //  HealthyDietDetailViewModel.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Admin on 26/06/2024.
+//  Created by Phạm Hồng Sơn on 17/09/2024.
 //
 
 import Foundation

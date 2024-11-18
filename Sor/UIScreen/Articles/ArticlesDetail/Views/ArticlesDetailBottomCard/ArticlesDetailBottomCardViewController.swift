@@ -1,8 +1,8 @@
 //
 //  BottomCardViewController.swift
-//  DemoCard
+//  Sor
 //
-//  Created by Admin on 25/9/24.
+//  Created by Phạm Hồng Sơn on 3/10/2024.
 //
 
 import UIKit

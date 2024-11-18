@@ -1,8 +1,8 @@
 //
 //  RecommendDietCell.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Admin on 21/6/24.
+//  Created by Phạm Hồng Sơn on 30/09/2024.
 //
 
 import UIKit

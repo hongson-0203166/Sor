@@ -1,8 +1,8 @@
 //
 //  RecommendTestPermissionView.swift
-//  PulseTrack
+//  Sor
 //
-//  Created by Admin on 14/8/24.
+//  Created by Phạm Hồng Sơn on 30/09/2024.
 //
 
 import UIKit

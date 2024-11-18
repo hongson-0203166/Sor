@@ -1,3 +1,4 @@
+
 import UIKit
 import ESTabBarController
 
@@ -58,24 +59,40 @@ class MainTabBarController: ESTabBarController {
     }
 
   private func setupMiddleButton() {
+    let fakeContinueView = UIView()
     let middleButton = UIButton(type: .custom)
+  
+    fakeContinueView.addSubview(middleButton)
+    tabBar.addSubview(fakeContinueView)
+
+    fakeContinueView.layer.cornerRadius = 35
     middleButton.backgroundColor = R.color.primary()
     middleButton.layer.cornerRadius = 35
     middleButton.setImage(TabbarType.bmi.iconFill, for: .normal)
     middleButton.tintColor = .white
     middleButton.addTarget(self, action: #selector(middleButtonTapped), for: .touchUpInside)
     
-    self.tabBar.addSubview(middleButton)
+    fakeContinueView.snp.makeConstraints { make in
+      make.centerX.equalTo(self.tabBar)
+      make.bottom.equalTo(self.tabBar).offset(-40)
+      make.width.height.equalTo(70)
+    }
+    
     middleButton.snp.makeConstraints { make in
       make.centerX.equalTo(self.tabBar)
       make.bottom.equalTo(self.tabBar).offset(-40)
       make.width.height.equalTo(70)
     }
     
-    self.tabBar.bringSubviewToFront(middleButton)
+    middleButton.startShimmerAnimation() { [weak self] in
+        guard let `self` = self else { return }
+         fakeContinueView.shake(count: 2, for: 0.5)
+    }
   }
 
     @objc func middleButtonTapped() {
         self.selectedIndex = 2
     }
 }
+
+

@@ -19,3 +19,9 @@ let STATUS_BAR_HEIGHT = UIApplication.shared.windows.first?.windowScene?.statusB
 let NAVIGATION_HEIGHT = STATUS_BAR_HEIGHT + 44
 let SAFE_BOTTOM_HEIGHT = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
 let SAFE_TOP_HEIGHT = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}

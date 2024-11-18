@@ -1,8 +1,8 @@
 //
 //  HealthTestQuestionModel.swift
-//  HeartCare
+//  Sor
 //
-//  Created by Admin on 25/6/24.
+//  Created by Phạm Hồng Sơn on 21/09/2024.
 //
 
 import Foundation

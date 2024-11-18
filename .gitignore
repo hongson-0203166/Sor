@@ -3,3 +3,4 @@ R.generated.swift
 # CocoaPods
 Pods/
 Podfile.lock
+.env

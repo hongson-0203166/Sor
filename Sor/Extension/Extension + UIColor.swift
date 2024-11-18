@@ -6,6 +6,43 @@
 //
 
 import UIKit
+import SwiftUI
+
+extension Color {
+    init(hex: String, alpha: Double = 1.0) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8 * 17), (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (UInt64(alpha * 255), int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (UInt64(alpha * 255), 0, 0, 0)
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue: Double(b) / 255,
+            opacity: Double(a) / 255
+        )
+    }
+}
+
+extension DateFormatter {
+  static let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    return formatter
+  }()
+}
+
 
 extension UIColor {
    convenience init(red: Int, green: Int, blue: Int) {
@@ -24,6 +61,60 @@ extension UIColor {
        )
    }
 }
+
+extension UIColor {
+  
+  convenience init(hex: String) {
+    let r, g, b, a: CGFloat
+    
+    // Remove the hash if it exists
+    var hexString = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+    hexString = hexString.replacingOccurrences(of: "#", with: "")
+    
+    // Ensure the hex string is 6 or 8 characters long
+    if hexString.count == 6 {
+      hexString += "FF" // Default alpha value if none provided
+    }
+    
+    if hexString.count == 8 {
+      let start = hexString.startIndex
+      let rIndex = hexString.index(start, offsetBy: 2)
+      let gIndex = hexString.index(start, offsetBy: 4)
+      let bIndex = hexString.index(start, offsetBy: 6)
+      let aIndex = hexString.index(start, offsetBy: 8)
+      
+      let rString = String(hexString[start..<rIndex])
+      let gString = String(hexString[rIndex..<gIndex])
+      let bString = String(hexString[gIndex..<bIndex])
+      let aString = String(hexString[bIndex..<aIndex])
+      
+      var rValue: UInt64 = 0
+      var gValue: UInt64 = 0
+      var bValue: UInt64 = 0
+      var aValue: UInt64 = 0
+      
+      Scanner(string: rString).scanHexInt64(&rValue)
+      Scanner(string: gString).scanHexInt64(&gValue)
+      Scanner(string: bString).scanHexInt64(&bValue)
+      Scanner(string: aString).scanHexInt64(&aValue)
+      
+      r = CGFloat(rValue) / 255.0
+      g = CGFloat(gValue) / 255.0
+      b = CGFloat(bValue) / 255.0
+      a = CGFloat(aValue) / 255.0
+      
+    } else {
+      r = 1.0
+      g = 1.0
+      b = 1.0
+      a = 1.0
+    }
+    
+    self.init(red: r, green: g, blue: b, alpha: a)
+  }
+}
+
+
 extension UIColor {
     
     convenience init(hex: Int, alpha: CGFloat = 1) {
@@ -985,7 +1076,19 @@ extension UIViewController {
     var name: String {
         return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
     }
-
+  
+  func presentWithCustomTransparent(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+      let delegate = SlideInPresentationDelegate()
+      delegate.direction = .bottom
+      viewControllerToPresent.transitioningDelegate = delegate
+      viewControllerToPresent.modalPresentationStyle = .custom
+//        viewControllerToPresent.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissViewController)))
+      present(viewControllerToPresent, animated: animated, completion: completion)
+  }
+  
+  @objc private func dismissViewController() {
+      dismiss(animated: true)
+  }
     
     func pop(animated: Bool = true) {
         navigationController?.popViewController(animated: animated)
@@ -1043,10 +1146,180 @@ extension UIViewController {
     }
 }
 
-extension UIViewController: UIPopoverPresentationControllerDelegate {
+extension UIViewController: @retroactive UIAdaptivePresentationControllerDelegate {}
+
+extension UIViewController: @retroactive UIPopoverPresentationControllerDelegate {
     public func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }
 }
 
 
+// 1
+enum PresentationTransition: Int {
+    case left = 0
+    case top = 1
+    case right = 2
+    case bottom = 3
+}
+
+class SlideInPresentationDelegate: NSObject, UIViewControllerTransitioningDelegate {
+    // 2
+    var direction = PresentationTransition.left
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = SlideInPresentationController(presentedViewController: presented, presenting: presenting, direction: direction)
+
+        return presentationController
+    }
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInPresentationAnimator(direction: direction, isPresentation: true)
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInPresentationAnimator(direction: direction, isPresentation: false)
+    }
+
+}
+
+class SlideInPresentationController: UIPresentationController {
+
+    var direction: PresentationTransition
+
+    init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, direction: PresentationTransition) {
+        self.direction = direction
+
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
+        
+        setupBackgroundView()
+    }
+    
+    var backgroundView: UIView!
+
+    func setupBackgroundView() {
+        backgroundView = UIView()
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundView.backgroundColor = .black.withAlphaComponent(0.2)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+        backgroundView.addGestureRecognizer(recognizer)
+    }
+
+    @objc func handleTap(recognizer: UITapGestureRecognizer) {
+        presentingViewController.dismiss(animated: true, completion: nil)
+    }
+
+    override func presentationTransitionWillBegin() {
+        // 1
+        containerView?.insertSubview(backgroundView, at: 0)
+        // 2
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[backgroundView]|", options: [], metrics: nil, views: ["backgroundView" : backgroundView!]))
+
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[backgroundView]|", options: [], metrics: nil, views: ["backgroundView" : backgroundView!]))
+        // 3
+        guard let coordinator = presentedViewController.transitionCoordinator else {
+            backgroundView.alpha = 1.0
+            return
+        }
+        coordinator.animate(alongsideTransition: { _ in
+            self.backgroundView.alpha = 1.0
+        })
+    }
+
+    override func dismissalTransitionWillBegin() {
+        guard let coordinator = presentedViewController.transitionCoordinator else {
+            backgroundView.alpha = 0
+            return
+        }
+
+        coordinator.animate(alongsideTransition: { _ in
+            self.backgroundView.alpha = 0
+        })
+    }
+
+    // 1
+    override func containerViewWillLayoutSubviews() {
+        presentedView?.frame = frameOfPresentedViewInContainerView
+    }
+    // 2
+    override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+        switch direction {
+        case .left, .right:
+            return CGSize(width: parentSize.width*(3.0/4.0), height: parentSize.height)
+        case .top, .bottom:
+            return CGSize(width: parentSize.width, height: parentSize.height)
+        }
+    }
+    // 3
+    override var frameOfPresentedViewInContainerView: CGRect {
+        var frame: CGRect = .zero
+        frame.size = size(forChildContentContainer: presentedViewController, withParentContainerSize: containerView!.bounds.size)
+
+        switch direction {
+        case .right:
+            frame.origin.x = containerView!.frame.width*(1.0/4.0)
+        case .bottom:
+            frame.origin.y = 0
+        default:
+            frame.origin = .zero
+        }
+
+        return frame
+    }
+
+}
+
+class SlideInPresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    let direction: PresentationTransition
+    
+    let isPresentation: Bool
+    
+    init(direction: PresentationTransition, isPresentation: Bool) {
+        self.direction = direction
+        self.isPresentation = isPresentation
+        super.init()
+    }
+    
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.5
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        // 2
+        let key = isPresentation ? UITransitionContextViewControllerKey.to : UITransitionContextViewControllerKey.from
+        let controller = transitionContext.viewController(forKey: key)!
+        
+        // 3
+        if isPresentation {
+            transitionContext.containerView.addSubview(controller.view)
+        }
+        // 4
+        let presentedFrame = transitionContext.finalFrame(for: controller)
+        var dismissedFrame = presentedFrame
+        switch direction {
+        case .left:
+            dismissedFrame.origin.x = -presentedFrame.width
+        case .right:
+            dismissedFrame.origin.x = transitionContext.containerView.frame.size.width
+        case .top:
+            dismissedFrame.origin.y = -presentedFrame.height
+        case .bottom:
+            dismissedFrame.origin.y = transitionContext.containerView.frame.size.height
+        }
+        
+        // 5
+        let initialFrame = isPresentation ? dismissedFrame : presentedFrame
+        let finalFrame = isPresentation ? presentedFrame : dismissedFrame
+        
+        // 6
+        let animationDuration = transitionDuration(using: transitionContext)
+        controller.view.frame = initialFrame
+        UIView.animate(withDuration: animationDuration, animations: {
+            controller.view.frame = finalFrame
+        }) { (finished) in
+            transitionContext.completeTransition(finished)
+        }
+    }
+}
