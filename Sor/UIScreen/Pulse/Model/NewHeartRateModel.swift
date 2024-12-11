@@ -1,9 +1,4 @@
-//
-//  NewHeartRateModel.swift
-//  HeartCare
-//
-//  Created by Admin on 9/7/24.
-//
+
 
 import RealmSwift
 

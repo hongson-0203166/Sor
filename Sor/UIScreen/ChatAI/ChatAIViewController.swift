@@ -14,7 +14,7 @@ class ChatAIViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let contentView = ContentView()
+    let contentView = ChatView()
     let hostingController = UIHostingController(rootView: contentView)
     
     addChild(hostingController)
@@ -32,7 +32,7 @@ class ChatAIViewController: BaseViewController {
   }
 }
 
-struct ContentView: HookView {
+struct ChatView: HookView {
   @StateObject var viewModel = ChatViewModel()
   @State var textMessage: String = ""
 //  @State private var areButtonsHidden: Bool = false
@@ -43,6 +43,9 @@ struct ContentView: HookView {
     HookScope {
       let areButtonsHidden = useState(false)
       VStack {
+        Text("AI Chat")
+            .font(.title)
+            .fontWeight(.bold)
         if viewModel.messages.isEmpty {
           EmptyView()
         } else {
@@ -71,46 +74,46 @@ struct ContentView: HookView {
         }
         
         HStack {
-          if !areButtonsHidden.wrappedValue {
-            Button {
-              showingCustomCamera = true
-            } label: {
-              Image(R.image.ic_camera)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-            }
-            .sheet(isPresented: $showingCustomCamera, onDismiss: {
-                      guard let inputImage = image else { return }
-                      print("\(inputImage)")
-            }) {
-              CustomCameraView(image: $image)
-            }
-            Button { } label: {
-              Image(R.image.ic_photo)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-            }
-            
-            Button { } label: {
-              Image(R.image.ic_voice)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-            }
-          } else {
-            Button {
-              withAnimation {
-                areButtonsHidden.wrappedValue = false
-              }
-            } label: {
-              Image(R.image.ic_next1)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-            }
-          }
+//          if !areButtonsHidden.wrappedValue {
+//            Button {
+//              showingCustomCamera = true
+//            } label: {
+//              Image(R.image.ic_camera)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 24, height: 24)
+//            }
+//            .sheet(isPresented: $showingCustomCamera, onDismiss: {
+//                      guard let inputImage = image else { return }
+//                      print("\(inputImage)")
+//            }) {
+//              CustomCameraView(image: $image)
+//            }
+//            Button { } label: {
+//              Image(R.image.ic_photo)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 24, height: 24)
+//            }
+//            
+//            Button { } label: {
+//              Image(R.image.ic_voice)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 24, height: 24)
+//            }
+//          } else {
+//            Button {
+//              withAnimation {
+//                areButtonsHidden.wrappedValue = false
+//              }
+//            } label: {
+//              Image(R.image.ic_next1)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 24, height: 24)
+//            }
+//          }
           
           TextField("Enter your ask...", text: self.$textMessage, onEditingChanged: { isEditing in
                     if isEditing {

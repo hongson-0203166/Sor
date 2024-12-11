@@ -12,16 +12,6 @@ protocol CalendarViewControllerDeleagte {
   func didSelectDate(dateString: String)
 }
 
- enum HomeModel {
-    static let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    
-    static var numOfDaysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    
-    static let cycleLength: Int = 28
-    static let periodLength: Int = 5
-    static let lengthCountDate: Int = 12
-}
-
 class HomeViewController: BaseViewController {
   
   // MARK: - Variables & Constants
@@ -41,15 +31,26 @@ class HomeViewController: BaseViewController {
   @IBOutlet weak var inforLargeDateView: UIView!
   @IBOutlet weak var inforDateLable: UILabel!
   @IBOutlet weak var inforDateLargeLable: UILabel!
-  
-  let viewModel = HomeViewModel()
+    @IBOutlet weak var lblDateThuThai: UILabel!
+    @IBOutlet weak var lblDateRungTrung: UILabel!
+    @IBOutlet weak var lblNgayCoKinh: UILabel!
+    @IBOutlet weak var lblDateNormal: UILabel!
+    var viewModel = HomeViewModel()
   var delegate: CalendarViewControllerDeleagte?
-  
+ 
+    
   // MARK: - UIVIewController Methods
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+      viewModel
+          .userHelper
+          .publisher()
+          .receive(on: DispatchQueue.main)
+          .sink { [weak self] _ in
+          guard let `self` = self else { return }
+          self.collectionView.reloadData()
+          }.store(in: &cancelable)
   }
   
   override func viewDidLayoutSubviews() {
@@ -60,17 +61,25 @@ class HomeViewController: BaseViewController {
   // MARK: - UIVIewController helper Methods
   
   override func configView() {
-
     setupViewControllerUI()
     setupCalendar()
+    showOnboarding()
   }
-  
+    
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     setupCalendar()
   }
-  
-  func setupCalendar() {
+    
+  func showOnboarding() {
+    guard UserDefaults.standard.isOnboarding ?? false else {
+        let secondSwiftUIView = OnboardingView().toUIViewController()
+        VCService.push(controller: secondSwiftUIView)
+        return
+        }
+   }
+    
+    func setupCalendar() {
     viewModel.currentMonthIndex = Calendar.current.component(.month, from: Date())
     viewModel.currentMonthIndex -= 1 // bcz apple calendar returns months starting from 1
     
@@ -86,7 +95,7 @@ class HomeViewController: BaseViewController {
     viewModel.presentMonthIndex = viewModel.currentMonthIndex
     viewModel.presentYear = viewModel.currentYear
     
-    let inforDateText = "Ngày thứ \(viewModel.menstruationDateInfor(for: Date()) ?? 0) của chu kì kinh nguyệt"
+    let inforDateText = "The \(viewModel.menstruationDateInfor(for: Date()) ?? 0)th day of the menstrual cycle."
         let attributedString = NSMutableAttributedString(string: inforDateText)
 
     let range = (inforDateText as NSString).range(of: "\(viewModel.menstruationDateInfor(for: Date()) ?? 0)")
@@ -97,7 +106,7 @@ class HomeViewController: BaseViewController {
     // Gán attributedString vào label
     inforDateLable.attributedText = attributedString
     inforDateLable.textColor = UIColor(hex: 0xEB7377)
-    inforDateLargeLable.text = "\(viewModel.menstruationDateDetailInfor() ?? 0) ngày đến kì kinh tiếp theo Ngày xác suất mang thai thấp"
+    inforDateLargeLable.text = "\(viewModel.menstruationDateDetailInfor() ?? 0) days until the next period. Low chance of pregnancy today."
     
     // display current month name in title
     topMonthButton.setTitle("\(HomeModel.months[viewModel.currentMonthIndex]) - \(viewModel.currentYear)", for: .normal)
@@ -120,6 +129,10 @@ class HomeViewController: BaseViewController {
     
     inforDateView.setBorder(width: 3.5, color: UIColor(hex: 0xEB7377), radius: 12)
     inforLargeDateView.setBorder(width: 2.5, color: UIColor(hex: 0xD3D3D3), radius: 16)
+      lblDateThuThai.text = "Fertile day"
+      lblDateRungTrung.text = "Ovulation day"
+      lblNgayCoKinh.text = "Menstrual day"
+      lblDateNormal.text = "Normal day"
 }
   
   // MARK: - IBActions
@@ -233,11 +246,11 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     if let lastCycleEndDate = viewModel.lastCycleStartDate {
-      let ovulationDates = viewModel.calculateOvulationDates(for: lastCycleEndDate, cycleLength: HomeModel.cycleLength, monthsAhead: HomeModel.lengthCountDate)
+        let ovulationDates = viewModel.calculateOvulationDates(for: lastCycleEndDate, cycleLength: viewModel.cycleLength, monthsAhead: HomeModel.lengthCountDate)
       // Tính ngày có kinh nguyệt
-      let menstrualDates = viewModel.calculateMenstrualDates(for: lastCycleEndDate, cycleLength: HomeModel.cycleLength, monthsAhead: HomeModel.lengthCountDate)
+        let menstrualDates = viewModel.calculateMenstrualDates(for: lastCycleEndDate, cycleLength: viewModel.cycleLength, monthsAhead: HomeModel.lengthCountDate)
       // Tính ngày rụng trứng và ngày có khả năng thụ thai cho 10 tháng tới
-      let ovulationDatesFertileDays = viewModel.calculateOvulationAndFertileDays(for: lastCycleEndDate, cycleLength: HomeModel.cycleLength, monthsAhead: HomeModel.lengthCountDate)
+        let ovulationDatesFertileDays = viewModel.calculateOvulationAndFertileDays(for: lastCycleEndDate, cycleLength: viewModel.cycleLength, monthsAhead: HomeModel.lengthCountDate)
       
       // Xác định ngày tương ứng trong tháng này
       let currentDate = indexPath.item - viewModel.firstWeekDayOfMonth + 2

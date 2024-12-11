@@ -25,14 +25,6 @@ class HeartRateResultViewController: BaseViewController {
     @IBOutlet weak var lblValue: UILabel!
     @IBOutlet weak var lblType: UILabel!
     @IBOutlet weak var btnContinue: UIButton!
-    @IBOutlet weak var lblPersonal: UILabel!
-    @IBOutlet weak var lblGive: UILabel!
-    @IBOutlet weak var viewChat: UIView!
-    @IBOutlet weak var lblEncouragement: UILabel!
-    @IBOutlet weak var lblEncouragementDes: UILabel!
-    @IBOutlet weak var lblSuggestion: UILabel!
-    @IBOutlet weak var tableView: AutoReSizeTableView!
-    @IBOutlet weak var animationView: LottieAnimationView!
     
     private var displayLink: CADisplayLink?
     private var animationStartTime: CFTimeInterval?
@@ -145,8 +137,7 @@ extension HeartRateResultViewController {
 //        lblSuggestion.font = R.font.outfitMedium(size: 17)
 //        lblSuggestion.textColor = UIColor(hex: 0x0F1827)
 //        lblEncouragementDes.font = R.font.outfitRegular(size: 16)
-        lblEncouragementDes.textColor = UIColor(hex: 0x353F50)
-        lblEncouragementDes.text = HeartRateResultType.getType(pulse: Double(viewModel.model.bpm)).encouragement
+    //lblEncouragementDes.text = HeartRateResultType.getType(pulse: Double(viewModel.model.bpm)).encouragement
         
         lblValue.text = "\(viewModel.model.bpm)"
         lblType.text = HeartRateResultType.getType(pulse: Double(viewModel.model.bpm)).value.text
@@ -154,27 +145,27 @@ extension HeartRateResultViewController {
         lblHrvValue.text = "\(viewModel.model.hrv)"
         
         lineProgressView.layer.cornerRadius = 5
-        lineProgressView.layer.masksToBounds = true
+       // lineProgressView.layer.masksToBounds = true
         //btnContinue.titleLabel?.font = R.font.outfitSemiBold(size: 18)
     }
     
     private func initTableView() {
-        tableView.registerCell(HeartRateResultCell.self)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        tableView.estimatedRowHeight = 40
-        tableView.setHeightForHeader()
-        tableView.setHeightForFooter()
+//        tableView.registerCell(HeartRateResultCell.self)
+//        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.separatorStyle = .none
+//        tableView.showsVerticalScrollIndicator = false
+//        tableView.estimatedRowHeight = 40
+//        tableView.setHeightForHeader()
+//        tableView.setHeightForFooter()
     }
     
     private func initAnimationView() {
-        animationView.animation = LottieAnimation.named("heart_chat")
-        animationView.contentMode = .scaleAspectFill
-        animationView.loopMode = .loop
-        animationView.animationSpeed = 1.3
-        animationView.play()
+//        animationView.animation = LottieAnimation.named("heart_chat")
+//        animationView.contentMode = .scaleAspectFill
+//        animationView.loopMode = .loop
+//        animationView.animationSpeed = 1.3
+//        animationView.play()
     }
 }
 
@@ -190,33 +181,6 @@ extension HeartRateResultViewController {
         
         // Xử lý đổi màu view khi animation đang khởi chạy
         viewProgress.backgroundColor = HeartRateResultType.getType(pulse: actualPulse).value.color
-    }
-    
-//    @objc
-//    private func tapChat() {
-//        if !UserDefaults.standard.isUserVip {
-//            if UserDefaults.standard.countShowChatHeartRate >= 1 {
-//                VCService.showIAP(source: .personal_therapist_2, overTabbar: false, onSuccess: { [weak self] in
-//                    guard let `self` = self else {return}
-//                    self.pushToChat()
-//                }, onClose: nil)
-//            } else {
-//                pushToChat()
-//            }
-//        } else {
-//            pushToChat()
-//        }
-//    }
-}
-
-// MARK: - func
-extension HeartRateResultViewController {
-    func pushToChat() {
-//        if let _ = UserDefaults.standard.loginInfo {
-//            VCService.push(controller: HeartRateChatViewController())
-//        } else {
-//            VCService.push(controller: LoginViewController(flow: .heart_result))
-//        }
     }
 }
 

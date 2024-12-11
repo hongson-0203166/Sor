@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewModel {
   var currentMonthIndex: Int = 0
@@ -14,9 +15,23 @@ class HomeViewModel {
   var presentYear: Int = 0
   var todaysDate: Int = 0
   var firstWeekDayOfMonth: Int = 0 // (Sunday-Saturday 1-7)
-  var lastCycleStartDate: Date? {
-    DateFormatter.dateFormatter.date(from: "2024-09-3")
-  }
+  var lastCycleStartDate: Date?
+  var cycleLength: Int = 28
+  var periodLength: Int = 5
+  let userHelper = RealmHelper<User>()
+    private var cancelable = Set<AnyCancellable>()
+    
+    init() {
+        userHelper.publisher()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] users in
+                guard let `self` = self else { return }
+                lastCycleStartDate = users.first?.cycleLatest
+                cycleLength = users.first?.cycleLength ?? 0
+                periodLength = users.first?.periodLength ?? 0
+            }
+            .store(in: &cancelable)
+    }
   
   func getFirstWeekDay() -> Int {
     let dateString = "\(currentYear)-\(currentMonthIndex + 1)-01"
@@ -47,7 +62,7 @@ class HomeViewModel {
   //Tính toán ngày rụng trứng
   func calculateOvulationDate(from lastCycleEndDate: Date, cycleLength: Int) -> Date {
     // Ngày rụng trứng sẽ là ngày cuối cùng + 14 (giả sử chu kỳ 28 ngày)
-    return Calendar.current.date(byAdding: .day, value: HomeModel.cycleLength/2, to: lastCycleEndDate)!
+    return Calendar.current.date(byAdding: .day, value: cycleLength/2, to: lastCycleEndDate)!
   }
   
   //Tính toán các ngày rụng trứng
@@ -75,7 +90,7 @@ class HomeViewModel {
     
     // Tính ngày bắt đầu và kết thúc kỳ kinh đầu tiên
     var firstStartDate = lastCycleEndDate // Ngày cuối cùng của chu kỳ
-    let firstEndDate = Calendar.current.date(byAdding: .day, value: HomeModel.periodLength - 1, to: firstStartDate)! // 5 ngày
+    let firstEndDate = Calendar.current.date(byAdding: .day, value: periodLength - 1, to: firstStartDate)! // 5 ngày
     menstrualDates.append((firstStartDate, firstEndDate))
     
     // Tính ngày có kinh cho các tháng tiếp theo
@@ -84,7 +99,7 @@ class HomeViewModel {
       let nextStartDate = Calendar.current.date(byAdding: .day, value: cycleLength, to: firstStartDate)!
       
       // Ngày kết thúc kỳ kinh tiếp theo
-      let nextEndDate = Calendar.current.date(byAdding: .day, value: HomeModel.periodLength - 1, to: nextStartDate)! // 6 ngày
+      let nextEndDate = Calendar.current.date(byAdding: .day, value: periodLength - 1, to: nextStartDate)! // 6 ngày
       menstrualDates.append((nextStartDate, nextEndDate))
       
       // Cập nhật ngày bắt đầu cho lần tiếp theo
@@ -133,18 +148,18 @@ class HomeViewModel {
     }
     
     // Tính toán ngày cuối cùng của chu kỳ gần nhất
-    let lastCycleEndDate = Calendar.current.date(byAdding: .day, value: HomeModel.cycleLength - 1, to: lastCycleStartDate)!
+    let lastCycleEndDate = Calendar.current.date(byAdding: .day, value: cycleLength - 1, to: lastCycleStartDate)!
     
     // Tính số ngày đã trôi qua từ ngày cuối cùng của chu kỳ đến hôm nay
     let daysSinceLastCycleEnd = Calendar.current.dateComponents([.day], from: lastCycleEndDate, to: today).day ?? 0
     
     // Nếu ngày hôm nay là trước ngày bắt đầu chu kỳ mới
     if daysSinceLastCycleEnd < 0 {
-      let currentCycleDay = (HomeModel.cycleLength + daysSinceLastCycleEnd) % HomeModel.cycleLength
-      return currentCycleDay == 0 ? HomeModel.cycleLength : currentCycleDay
+      let currentCycleDay = (cycleLength + daysSinceLastCycleEnd) % cycleLength
+      return currentCycleDay == 0 ? cycleLength : currentCycleDay
     } else {
       // Tính toán ngày trong chu kỳ hiện tại
-      let currentCycleDay = (daysSinceLastCycleEnd % HomeModel.cycleLength)
+      let currentCycleDay = (daysSinceLastCycleEnd % cycleLength)
       return currentCycleDay
     }
   }
@@ -161,7 +176,7 @@ class HomeViewModel {
       
       // Lặp qua các chu kỳ cho đến khi tìm thấy ngày bắt đầu kỳ tiếp theo sau hôm nay
       while nextPeriodStartDate <= today {
-          nextPeriodStartDate = Calendar.current.date(byAdding: .day, value: HomeModel.cycleLength, to: nextPeriodStartDate)!
+          nextPeriodStartDate = Calendar.current.date(byAdding: .day, value: cycleLength, to: nextPeriodStartDate)!
       }
       
       // Tính số ngày đến kỳ kinh tiếp theo từ hôm nay

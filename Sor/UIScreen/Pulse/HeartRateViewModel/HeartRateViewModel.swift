@@ -199,36 +199,3 @@ extension HeartRateViewModel {
         return Int(averageDistance * 1000)
     }
 }
-
-extension HeartRateViewModel {
-//    func countHeartRate() {
-//        if UserDefaults.standard.heartRateInDay.components(separatedBy: " -- ").count < 2 {
-//            // Nếu dữ liệu chưa tồn tại
-//            UserDefaults.standard.heartRateInDay = Date().toString(dateFormat: "yyyy/MM/dd") + " -- " + "1"
-//        } else {
-//            // Nếu đã tồn tại
-//            let dateStr = UserDefaults.standard.heartRateInDay.components(separatedBy: " -- ").first ?? ""
-//            if dateStr == Date().toString(dateFormat: "yyyy/MM/dd") {
-//                // Nếu ngày trong mục lưu trữ giống ngày hiện tại -> Cộng thêm 1
-//                let count = Int(UserDefaults.standard.heartRateInDay.components(separatedBy: " -- ").last ?? "") ?? 0
-//                UserDefaults.standard.heartRateInDay = dateStr + " -- " + "\(count + 1)"
-//            } else {
-//                // Nếu khác ngày hiện tại -> thay thế bằng ngày hiện tại
-//                UserDefaults.standard.heartRateInDay = Date().toString(dateFormat: "yyyy/MM/dd") + " -- " + "1"
-//            }
-//        }
-//    }
-    
-//    func getNumberOfHeartRate() -> Int {
-//        if UserDefaults.standard.heartRateInDay.components(separatedBy: " -- ").count < 2 {
-//            return 0
-//        } else {
-//            let dateStr = UserDefaults.standard.heartRateInDay.components(separatedBy: " -- ").first ?? ""
-//            if dateStr == Date().toString(dateFormat: "yyyy/MM/dd") {
-//                return Int(UserDefaults.standard.heartRateInDay.components(separatedBy: " -- ").last ?? "") ?? 0
-//            } else {
-//                return 0
-//            }
-//        }
-//    }
-}

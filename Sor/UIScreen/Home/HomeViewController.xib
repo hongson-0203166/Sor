@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,6 +22,10 @@
                 <outlet property="inforDateLargeLable" destination="oJS-Nv-5jO" id="GeA-yN-K2f"/>
                 <outlet property="inforDateView" destination="Z2f-c6-a5h" id="h7c-sm-yX5"/>
                 <outlet property="inforLargeDateView" destination="4i9-CE-WII" id="MvY-bW-NKi"/>
+                <outlet property="lblDateNormal" destination="tuu-SM-s9F" id="U0k-4d-wDP"/>
+                <outlet property="lblDateRungTrung" destination="mNs-SR-Khk" id="ifT-rh-9TE"/>
+                <outlet property="lblDateThuThai" destination="QOL-G3-yAv" id="5iB-8U-LiG"/>
+                <outlet property="lblNgayCoKinh" destination="zWx-di-QG9" id="Iyc-3k-GK1"/>
                 <outlet property="leftButton" destination="ZAA-K5-9Z2" id="WrI-DZ-lnw"/>
                 <outlet property="rightButton" destination="qlZ-0a-qSo" id="rwI-Py-ZXY"/>
                 <outlet property="topMonthButton" destination="qkL-Wb-IoB" id="Xrr-bW-aBa"/>
@@ -281,7 +285,7 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5nm-V1-yJY">
-                                    <rect key="frame" x="24" y="607" width="163.66666666666666" height="14.333333333333371"/>
+                                    <rect key="frame" x="47.999999999999986" y="607" width="163.66666666666663" height="14.333333333333371"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-iR-sOh">
                                             <rect key="frame" x="0.0" y="1" width="12" height="12"/>
@@ -305,7 +309,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zFi-p6-0o5">
-                                    <rect key="frame" x="24.000000000000007" y="629.33333333333337" width="108.66666666666669" height="14.333333333333371"/>
+                                    <rect key="frame" x="48.000000000000007" y="629.33333333333337" width="108.66666666666669" height="14.333333333333371"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cay-Qg-U3h">
                                             <rect key="frame" x="0.0" y="1" width="12" height="12"/>
@@ -329,7 +333,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="deq-T0-A0O">
-                                    <rect key="frame" x="237.33333333333337" y="607" width="131.66666666666663" height="14.333333333333371"/>
+                                    <rect key="frame" x="213.33333333333337" y="607" width="131.66666666666663" height="14.333333333333371"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdu-BB-TxA">
                                             <rect key="frame" x="0.0" y="1" width="12" height="12"/>
@@ -353,7 +357,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Dtz-e1-AKL">
-                                    <rect key="frame" x="237.33333333333337" y="629.33333333333337" width="131.66666666666663" height="14.333333333333371"/>
+                                    <rect key="frame" x="213.33333333333337" y="629.33333333333337" width="131.66666666666663" height="14.333333333333371"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfN-pf-8Bc">
                                             <rect key="frame" x="0.0" y="1" width="12" height="12"/>
@@ -382,7 +386,7 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="5nm-V1-yJY" firstAttribute="leading" secondItem="Fn5-Vq-kW2" secondAttribute="leading" constant="24" id="3tq-t2-vJf"/>
+                                <constraint firstItem="5nm-V1-yJY" firstAttribute="leading" secondItem="Fn5-Vq-kW2" secondAttribute="leading" constant="48" id="3tq-t2-vJf"/>
                                 <constraint firstAttribute="trailing" secondItem="uVg-0g-Lnm" secondAttribute="trailing" constant="24" id="5CF-1c-k95"/>
                                 <constraint firstAttribute="bottom" secondItem="Dtz-e1-AKL" secondAttribute="bottom" id="6pH-re-t3k"/>
                                 <constraint firstItem="MKG-nY-h3c" firstAttribute="top" secondItem="Z2f-c6-a5h" secondAttribute="bottom" constant="20" id="Cfk-xo-Umg"/>
@@ -397,7 +401,7 @@
                                 <constraint firstItem="zFi-p6-0o5" firstAttribute="top" secondItem="5nm-V1-yJY" secondAttribute="bottom" constant="8" id="YZz-x6-LUA"/>
                                 <constraint firstItem="Sel-pT-T6V" firstAttribute="top" secondItem="Fn5-Vq-kW2" secondAttribute="top" constant="24" id="ahO-kS-PRD"/>
                                 <constraint firstItem="uVg-0g-Lnm" firstAttribute="top" secondItem="MKG-nY-h3c" secondAttribute="bottom" constant="12" id="bR2-yw-YFt"/>
-                                <constraint firstAttribute="trailing" secondItem="deq-T0-A0O" secondAttribute="trailing" constant="24" id="cuN-Jc-Kp7"/>
+                                <constraint firstAttribute="trailing" secondItem="deq-T0-A0O" secondAttribute="trailing" constant="48" id="cuN-Jc-Kp7"/>
                                 <constraint firstItem="Sel-pT-T6V" firstAttribute="leading" secondItem="Fn5-Vq-kW2" secondAttribute="leading" constant="24" id="e5V-PX-xDg"/>
                                 <constraint firstItem="Z2f-c6-a5h" firstAttribute="top" secondItem="Sel-pT-T6V" secondAttribute="bottom" constant="20" id="fVs-EU-7iz"/>
                                 <constraint firstItem="ncz-oW-pLw" firstAttribute="leading" secondItem="Sel-pT-T6V" secondAttribute="trailing" constant="8" id="fjU-Fq-nmZ"/>
@@ -432,7 +436,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zLl-ve-R4x" secondAttribute="trailing" id="hO1-0l-kwn"/>
                 <constraint firstItem="zLl-ve-R4x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tnG-m3-zRe"/>
             </constraints>
-            <point key="canvasLocation" x="-367" y="-62"/>
+            <point key="canvasLocation" x="-82" y="-4"/>
         </view>
     </objects>
     <resources>

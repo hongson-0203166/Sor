@@ -50,3 +50,44 @@ extension UILabel {
       attributedText = attributedString
   }
 }
+
+public extension Int {
+  
+  func toTimeInterval() -> TimeInterval {
+    TimeInterval(self)
+  }
+  
+  func toDouble() -> Double {
+    Double(self)
+  }
+  
+  func toDate() -> Date {
+    Date(timeIntervalSince1970: self.toDouble())
+  }
+  
+  
+  func toUInt() -> UInt {
+    UInt(self)
+  }
+  
+  func toBool() -> Bool {
+    self == 1 ? true : false
+  }
+  
+  func toNano() -> Int {
+    self * 1_000_000_000
+  }
+  
+  func toGiga() -> Double {
+    Double(self / 1_000_000_000)
+  }
+  
+  var nano: Double {
+    Double(self / 1_000_000_000)
+  }
+  
+  var giga: Int {
+    self * 1_000_000_000
+  }
+}
+

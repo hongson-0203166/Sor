@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -53,7 +53,7 @@
                                 <constraint firstAttribute="height" constant="48" id="faM-Tj-eHX"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_healthydiet_back">
+                            <state key="normal" image="ic_back">
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -89,7 +89,7 @@
                                 <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-6e-PKL">
                                     <rect key="frame" x="0.0" y="0.0" width="123" height="36"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_breakfast" translatesAutoresizingMaskIntoConstraints="NO" id="U55-Im-kuv">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_breakfast" translatesAutoresizingMaskIntoConstraints="NO" id="U55-Im-kuv">
                                             <rect key="frame" x="20" y="8" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="8Qp-is-9NQ"/>
@@ -114,7 +114,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdI-fg-ov5">
                                     <rect key="frame" x="135" y="0.0" width="123" height="36"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_lunch" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-1W-9u1">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lunch" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-1W-9u1">
                                             <rect key="frame" x="20" y="8" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="I2b-rj-A04"/>
@@ -139,7 +139,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn8-8v-E4Z">
                                     <rect key="frame" x="270" y="0.0" width="123" height="36"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healthydiet_dinner" translatesAutoresizingMaskIntoConstraints="NO" id="Edz-Pd-IR2">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dinner" translatesAutoresizingMaskIntoConstraints="NO" id="Edz-Pd-IR2">
                                             <rect key="frame" x="20" y="8" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="Mhw-rq-g1l"/>
@@ -221,14 +221,14 @@
                 <constraint firstItem="zTo-Yz-Uac" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pxq-RP-VUv"/>
                 <constraint firstItem="TQq-bP-c4w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="w8K-dJ-Ka1"/>
             </constraints>
-            <point key="canvasLocation" x="590" y="63"/>
+            <point key="canvasLocation" x="-129" y="67"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_healthydiet_back" width="48" height="48"/>
-        <image name="ic_healthydiet_breakfast" width="20" height="20"/>
-        <image name="ic_healthydiet_dinner" width="20" height="20"/>
-        <image name="ic_healthydiet_lunch" width="20" height="20"/>
+        <image name="ic_back" width="48" height="48"/>
+        <image name="ic_breakfast" width="20" height="20"/>
+        <image name="ic_dinner" width="20" height="20"/>
+        <image name="ic_lunch" width="20" height="20"/>
         <image name="img_healthydiet_background" width="390" height="844"/>
         <namedColor name="color_E2465C">
             <color red="0.88627450980392153" green="0.27450980392156865" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
