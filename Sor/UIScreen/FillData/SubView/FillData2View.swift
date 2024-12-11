@@ -27,7 +27,7 @@ struct FillData2View: View {
                 .cornerRadius(24)
               } false: {
                 ZStack {
-                  Color.white
+                  Color.white.opacity(0.8)
                   VStack(spacing: 10) {
                     Text("\(value)")
                       .font(Font.custom("Outfit", size: 20*130/92).weight(.bold))
@@ -64,6 +64,7 @@ struct FillData2View: View {
           .frame(width: geometry.size.width - 40, height: 60, alignment: .center)
           .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
   }
   }

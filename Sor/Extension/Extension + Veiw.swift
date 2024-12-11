@@ -6,6 +6,94 @@
 //
 
 import UIKit
+import SwiftUI
+
+extension View {
+    @ViewBuilder
+    public func `if`<Content: View>(
+      _ condition: Bool,
+      transform: (Self) -> Content,
+      @ViewBuilder else: (Self) -> Content
+    ) -> some View {
+      if condition {
+        transform(self)
+          .eraseToAnyView()
+      } else {
+        `else`(self)
+          .eraseToAnyView()
+      }
+    }
+    
+    public func eraseToAnyView() -> AnyView {
+      AnyView(self)
+    }
+}
+
+struct HideViewModifier: ViewModifier {
+    let isHidden: Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .opacity(isHidden ? 0 : 1)
+    }
+}
+
+// Extending on View to apply to all Views
+extension View {
+    func hidden(_ isHidden: Bool) -> some View {
+        self.modifier(HideViewModifier(isHidden: isHidden))
+    }
+}
+
+public extension View {
+
+    /// Tranform a View in SwiftUI to UIViewController in UIKit
+    func toUIViewController() -> UIViewController {
+        let vc = UIHostingController(
+            rootView: self
+                .ignoresSafeArea()
+                .navigationBarHidden(true)
+        )
+        vc.navigationController?.isNavigationBarHidden = true
+        vc.navigationController?.navigationBar.isHidden = true
+        vc.view.backgroundColor = .clear
+        return vc
+    }
+    
+    /// Transform a View in SwiftUI to UIView in UIKit
+    func toUIView() -> UIView {
+        toUIViewController().view
+    }
+}
+
+public struct UIViewRepresented<UIViewType>: UIViewRepresentable where UIViewType: UIView {
+  public let makeUIView: (Context) -> UIViewType
+  public let updateUIView: (UIViewType, Context) -> Void = { _, _ in }
+  
+  public init(makeUIView: @escaping (Context) -> UIViewType) {
+    self.makeUIView = makeUIView
+  }
+  
+  public func makeUIView(context: Context) -> UIViewType {
+    self.makeUIView(context)
+  }
+  
+  public func updateUIView(_ uiView: UIViewType, context: Context) {
+    self.updateUIView(uiView, context)
+  }
+}
+
+extension UIViewController {
+  public func toSwiftUI() -> some View {
+    UIViewRepresented(makeUIView: { _ in self.view })
+  }
+}
+
+extension UIView {
+  public func toSwiftUI() -> some View {
+    UIViewRepresented(makeUIView: { _ in self })
+  }
+}
 
 class GradientView: UIView {
     @IBInspectable var startColor:   UIColor = .white { didSet { updateColors() }}

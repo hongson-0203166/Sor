@@ -12,8 +12,6 @@ struct FillData1View: View {
   
   var body: some View {
     ZStack {
-      Color
-        .white
       TextField("", text: $textInput)
         .frame(height: 52)
         .background(Color.white)

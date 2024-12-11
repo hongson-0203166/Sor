@@ -119,3 +119,21 @@ extension UIViewController {
 func delay(after milliseconds: Int, execute work: @escaping () -> ()) {
     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(milliseconds), execute: work)
 }
+
+public func delay(
+  second: Double = 0,
+  execute: @escaping () -> ()
+) {
+  DispatchQueue.main.asyncAfter(deadline: .now() + second, execute: execute)
+}
+
+public let mainQueue = DispatchQueue.main
+
+public let serialQueue = DispatchQueue(
+  label: "dq.serial.queue"
+)
+
+public let concurrentQueue = DispatchQueue(
+  label: "dq.concurrent.queue",
+  attributes: .concurrent
+)

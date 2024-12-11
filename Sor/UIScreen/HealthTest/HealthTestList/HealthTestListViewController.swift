@@ -43,11 +43,8 @@ class HealthTestListViewController: BaseViewController {
         imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapBack)))
         
         initTableView()
-        
-        
     }
-    
-    
+ 
     private func initTableView() {
         tableView.registerCell(HealthTestListCell.self)
         tableView.dataSource = self
