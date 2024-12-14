@@ -63,6 +63,7 @@ struct FillDataView: HookView {
                   guard selectedIndex != TabFillDataIndex.allCases.count - 1 else { return }
                   selectedIndex += 1
               }
+              .disabled(textInput == "")
             Spacer()
               .frame(height: 50)
           }
