@@ -87,8 +87,6 @@ class HeartRateResultViewController: BaseViewController {
     
     override func configView() {
         initComponents()
-        initTableView()
-        initAnimationView()
     }
             
     @IBAction func btnContinueTapped(_ sender: Any) {
@@ -116,56 +114,13 @@ class HeartRateResultViewController: BaseViewController {
 // MARK: - Init
 extension HeartRateResultViewController {
     private func initComponents() {
-//        lblTitle.font = R.font.outfitSemiBold(size: 20)
-//        lblPulse.font = R.font.outfitRegular(size: 18)
-//        lblPulseValue.font = R.font.outfitBold(size: 30)
-//        lblPulseUnit.font = R.font.outfitRegular(size: 16)
-//        lblHrv.font = R.font.outfitRegular(size: 18)
-//        lblHrvValue.font = R.font.outfitBold(size: 30)
-//        lblHrvUnit.font = R.font.outfitRegular(size: 16)
-//        lblResultTitle.font = R.font.outfitMedium(size: 20)
-//        lblLow.font = R.font.outfitMedium(size: 14)
-//        lblHigh.font = R.font.outfitMedium(size: 14)
-//        lblValue.font = R.font.outfitSemiBold(size: 14)
-//        lblType.font = R.font.outfitSemiBold(size: 14)
-//        lblPersonal.font = R.font.outfitMedium(size: 17)
-//        lblPersonal.textColor = UIColor(hex: 0x152238)
-//        lblGive.font = R.font.outfitRegular(size: 12)
-//        lblGive.textColor = UIColor(hex: 0x6D6D6D)
-//        lblEncouragement.font = R.font.outfitMedium(size: 17)
-//        lblEncouragement.textColor = UIColor(hex: 0x0F1827)
-//        lblSuggestion.font = R.font.outfitMedium(size: 17)
-//        lblSuggestion.textColor = UIColor(hex: 0x0F1827)
-//        lblEncouragementDes.font = R.font.outfitRegular(size: 16)
-    //lblEncouragementDes.text = HeartRateResultType.getType(pulse: Double(viewModel.model.bpm)).encouragement
-        
+
         lblValue.text = "\(viewModel.model.bpm)"
         lblType.text = HeartRateResultType.getType(pulse: Double(viewModel.model.bpm)).value.text
         lblPulseValue.text = "\(viewModel.model.bpm)"
         lblHrvValue.text = "\(viewModel.model.hrv)"
         
         lineProgressView.layer.cornerRadius = 5
-       // lineProgressView.layer.masksToBounds = true
-        //btnContinue.titleLabel?.font = R.font.outfitSemiBold(size: 18)
-    }
-    
-    private func initTableView() {
-//        tableView.registerCell(HeartRateResultCell.self)
-//        tableView.dataSource = self
-//        tableView.delegate = self
-//        tableView.separatorStyle = .none
-//        tableView.showsVerticalScrollIndicator = false
-//        tableView.estimatedRowHeight = 40
-//        tableView.setHeightForHeader()
-//        tableView.setHeightForFooter()
-    }
-    
-    private func initAnimationView() {
-//        animationView.animation = LottieAnimation.named("heart_chat")
-//        animationView.contentMode = .scaleAspectFill
-//        animationView.loopMode = .loop
-//        animationView.animationSpeed = 1.3
-//        animationView.play()
     }
 }
 

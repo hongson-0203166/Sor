@@ -168,7 +168,7 @@ class PulseViewController: BaseViewController {
     private func handleAminTimer() {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else {return}
-            
+            //MARK: progress 30s
             self.viewModel.progress += 0.2
             let progress = self.viewModel.progress * 100 / 30
             self.lblProgress.text = "\(Int(progress))%"
